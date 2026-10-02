@@ -614,3 +614,190 @@ blockquote cite { display: block; margin-top: 14px; color: #7769aa; font: 600 11
   font-size: 10px;
   font-weight: 700;
 }
+
+/* ===== October 2026 refinement II: compact single-row research/projects + bounded feedback ===== */
+/* Brand bird should visually fill the entire square mark. */
+.brand-mark {
+  background: #10172a;
+  overflow: hidden;
+}
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 48%;
+  transform: scale(1.08);
+}
+
+/* Hero copy is intentionally reduced to the name only. */
+.hero-copy { align-self: center; }
+.hero-copy h1 { margin-bottom: 0; }
+
+/* About has no oversized title; the copy becomes the focus. */
+.about-grid-simple {
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+.about-grid-simple .section-heading { max-width: none; }
+.about-grid-simple .section-kicker { margin-bottom: 0; }
+.about-grid-simple .about-copy { max-width: 900px; }
+
+/* Research and teaching introductions use readable prose rather than display headlines. */
+.section-heading-intro {
+  display: block;
+  max-width: 980px;
+  margin-bottom: 34px;
+}
+.section-heading-intro > div { max-width: 980px; }
+.section-intro-copy {
+  margin: 0;
+  max-width: 960px;
+  color: var(--muted);
+  font: 500 clamp(20px, 2.25vw, 30px)/1.5 "Source Serif 4", Georgia, serif;
+  letter-spacing: -.012em;
+}
+.section-ink .section-intro-copy { color: rgba(255,255,255,.74); }
+
+/* Research: R1–R4 are always one compact row each. */
+.research-grid {
+  grid-template-columns: 1fr !important;
+  gap: 14px !important;
+}
+.research-card,
+.research-card-feature,
+.research-card-row {
+  grid-column: auto !important;
+  min-height: 0 !important;
+  padding: 20px 24px !important;
+  display: grid !important;
+  grid-template-columns: 48px minmax(0,1fr) !important;
+  gap: 18px !important;
+  align-items: start !important;
+  justify-content: initial !important;
+}
+.research-index {
+  padding-top: 7px;
+  font-size: 12px;
+}
+.research-card h3 {
+  margin: 0 0 8px;
+  font-size: clamp(21px, 2.25vw, 30px) !important;
+}
+.research-card .tag { margin-bottom: 9px; }
+.research-card p { font-size: 14px; line-height: 1.55; }
+.research-card .card-link { margin-top: 12px; font-size: 12px; }
+
+/* Projects: one smaller horizontal row per project. */
+.project-grid,
+.project-grid-single {
+  grid-template-columns: 1fr !important;
+  gap: 14px !important;
+}
+.project-card-row,
+.project-card-compact {
+  display: grid !important;
+  grid-template-columns: 148px minmax(0,1fr) !important;
+  min-height: 0 !important;
+}
+.project-card-row .project-image,
+.project-card-compact .project-image {
+  height: 100% !important;
+  min-height: 122px !important;
+  max-height: 150px !important;
+}
+.project-card-row .project-body,
+.project-card-compact .project-body { padding: 15px 18px !important; }
+.project-card-row .project-body h3,
+.project-card-compact .project-body h3 {
+  margin: 3px 0 5px !important;
+  font-size: 19px !important;
+}
+.project-card-row .project-body p,
+.project-card-compact .project-body p {
+  margin: 0;
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+}
+.project-card-row .project-meta,
+.project-card-compact .project-meta { font-size: 10px; }
+.project-card-row .project-links,
+.project-card-compact .project-links { margin-top: 9px !important; }
+.project-card-row .project-links a,
+.project-card-compact .project-links a { font-size: 11px; }
+
+/* Feedback windows show roughly one-to-two cards, then clearly scroll. */
+.feedback-scroll,
+.feedback-scroll-window {
+  height: 292px !important;
+  max-height: 292px !important;
+  overflow-y: scroll !important;
+  padding-right: 14px !important;
+  scrollbar-gutter: stable;
+}
+.feedback-scroll-window .feedback-card {
+  margin-bottom: 10px;
+  padding: 16px 18px;
+  font-size: 16px;
+  line-height: 1.48;
+}
+.feedback-scroll-window .feedback-card:last-child { margin-bottom: 28px; }
+
+/* Certificates and badges: organized responsive cards rather than a text run-on. */
+.credentials-panel { overflow: hidden; }
+.credential-list {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px !important;
+}
+.credential-list a {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  min-width: 0;
+  min-height: 145px;
+  padding: 16px !important;
+}
+.credential-list a span {
+  display: inline-flex;
+  grid-column: auto !important;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #f0edff;
+  color: #5f4ad7;
+}
+.credential-list a strong {
+  font-size: 13px !important;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.credential-list a em { margin-top: auto; }
+
+@media (max-width: 1000px) {
+  .credential-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .research-card,
+  .research-card-feature,
+  .research-card-row {
+    grid-template-columns: 34px minmax(0,1fr) !important;
+    gap: 12px !important;
+    padding: 18px !important;
+  }
+  .project-card-row,
+  .project-card-compact { grid-template-columns: 1fr !important; }
+  .project-card-row .project-image,
+  .project-card-compact .project-image {
+    min-height: 150px !important;
+    max-height: 185px !important;
+  }
+  .feedback-scroll,
+  .feedback-scroll-window {
+    height: 270px !important;
+    max-height: 270px !important;
+  }
+  .credential-list { grid-template-columns: 1fr; }
+  .credential-list a { min-height: 112px; }
+}
