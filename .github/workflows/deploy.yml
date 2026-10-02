@@ -1,0 +1,56 @@
+name: Build and Deploy Personal Website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Compile teaching dossier
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          working_directory: source/teaching-dossier
+          texlive_version: 2026
+
+      - name: Stage website
+        run: |
+          rm -rf _site
+          cp -R site _site
+          cp source/teaching-dossier/main.pdf _site/assets/documents/teaching/teaching-dossier.pdf
+          touch _site/.nojekyll
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

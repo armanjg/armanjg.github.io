@@ -1,0 +1,1965 @@
+\documentclass[11pt]{article}
+
+% ============================================================
+% PACKAGES
+% ============================================================
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{makecell}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+
+\renewcommand\arraystretch{1.2}
+
+\newcolumntype{L}[1]
+{>{\RaggedRight\arraybackslash}m{#1}}
+
+% ============================================================
+% GLOBAL STYLE
+% ============================================================
+
+\setstretch{1.12}
+
+\titleformat{\section}
+{\large\bfseries}
+{}{0em}{}
+
+\titleformat{\subsection}
+{\normalsize\bfseries}
+{}{0em}{}
+
+\titleformat{\subsubsection}
+{\normalsize\itshape}
+{}{0em}{}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+% ============================================================
+% HEADER / FOOTER
+% ============================================================
+
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\fancyhf{}
+
+\lhead{Teaching Dossier --- Arman Jahangiri}
+\rhead{\thepage}
+
+\cfoot{
+\small Last updated: September 24, 2026
+}
+
+% ============================================================
+% LIST FORMATTING
+% ============================================================
+
+\setlist[itemize]{
+leftmargin=*,
+topsep=3pt,
+itemsep=2pt,
+parsep=0pt
+}
+
+\setlist[enumerate]{
+leftmargin=*,
+topsep=3pt,
+itemsep=2pt,
+parsep=0pt
+}
+
+% Resolve appendix paths both in Overleaf (project root) and local folder builds.
+\IfFileExists{source/teaching-dossier/appendices/evals1.pdf}{%
+  \newcommand{\appendixdir}{source/teaching-dossier/appendices}%
+}{%
+  \newcommand{\appendixdir}{appendices}%
+}
+
+% ============================================================
+% DOCUMENT
+% ============================================================
+
+\begin{document}
+
+% ============================================================
+% TITLE PAGE
+% ============================================================
+
+\begin{center}
+
+{\LARGE\textbf{Teaching Dossier}}\\[6pt]
+
+{\Large\textbf{Arman Jahangiri}}\\[4pt]
+
+Email:
+\href{mailto:arman77@uw.edu}
+{arman77@uw.edu}
+
+
+Website:
+\href{https://armanjg.github.io}
+{armanjg.github.io}
+
+
+
+LinkedIn:
+\href{https://www.linkedin.com/in/armanjg}
+{linkedin.com/in/armanjg}
+
+\end{center}
+
+\vspace{8pt}
+
+\noindent
+
+This dossier presents an evidence-based account of my teaching
+in mathematical and statistical sciences.
+It is supported by course materials,
+student evaluations,
+supervisory observations,
+and selected instructional artifacts.
+
+\vspace{10pt}
+
+\tableofcontents
+
+\newpage
+
+% ============================================================
+% SUMMARY
+% ============================================================
+
+\section{Summary of Teaching Profile}
+
+I teach mathematics and statistics with the goal of helping
+students become confident, independent, and conceptually
+grounded learners.
+My teaching focuses on developing students' ability to communicate mathematical ideas clearly
+and connect to the underlying structures that
+justify them.
+Across university teaching, tutoring, and enrichment programs,
+I have emphasized active engagement,
+transparent expectations,
+and structured opportunities for students to explain,
+test, and refine their thinking.
+
+At the University of Washington, I have served as an
+instructor of record and a teaching assistant.
+In Summer 2026, I taught
+{MATH/STAT 394: Probability I} as the instructor of record.
+I was responsible for the design and delivery of the
+course, including lectures,  homework, examinations,
+grading policies, student communication, accessibility
+arrangements, review materials, and the {\href{https://armanjg.github.io/MATH-394-Probability-1-v2/}{public course website}} that I hosted on my GitHub for a more organized and self-contained delivery, in addition to using the Canvas platform.
+
+I have taught sections in various topics such as algebra, precalculus,
+the full calculus sequence, and upper-division mathematics,
+including Linear Optimization at the University of Washington, and graduate and undergraduate courses in statistics and data science, such as Theoretical Statistics and Data Analysis at the University of Calgary. 
+
+Beyond formal university instruction,
+I have worked extensively as a private mathematics and
+statistics tutor and as an instructor in mathematics
+enrichment programs.
+
+A central feature of my teaching is the deliberate integration
+of conceptual understanding with structured practice.
+I aim to design learning experiences that help students
+interpret ideas meaningfully, recognize assumptions,
+justify methods, and adapt familiar tools to new
+settings.
+I also prioritize creating classroom environments in which
+students feel comfortable asking questions,
+revising their thinking,
+and participating actively in the learning process.
+
+This dossier documents my teaching philosophy,
+instructional practices,
+independent course design,
+student support,
+evidence of teaching effectiveness,
+and continuing professional development as an educator.
+
+% ============================================================
+% TEACHING PHILOSOPHY
+% ============================================================
+
+\section{Teaching Philosophy}
+
+\subsection{Teaching across educational frameworks}
+
+My approach to teaching has been shaped by experiences across
+multiple countries, languages, and educational systems.
+These experiences have convinced me that the quality of
+learning increases substantially when students move beyond
+passive observation.
+They develop stronger understanding when they articulate
+their reasoning, receive timely feedback,
+and have structured opportunities to refine their thinking.
+
+As a first-generation college graduate,
+I am aware that success in mathematics depends on both
+ mathematical ability and familiarity with academic
+expectations that are sometimes left implicit.
+Students may be uncertain about how to ask
+productive questions, approach an unfamiliar problem,
+interpret feedback, or evaluate their own understanding.
+I therefore try to make expectations visible and to create
+learning environments that support intellectual risk-taking
+and gradual development of independence.
+
+My goal as an educator is to cultivate students' ability to
+think with clarity, rigor, and independence.
+I support students to learn how to communicate complex ideas
+precisely, construct and evaluate arguments,
+identify assumptions,
+and connect individual mathematical techniques to broader
+theoretical and applied questions.
+
+\subsection{Externalizing reasoning as a foundation of learning}
+
+I believe students learn mathematics most effectively when
+they externalize.
+A correct answer is useful evidence of learning,
+but the reasoning that produced it is usually more informative.
+Students deepen their understanding when they explain why a
+method applies, compare alternative approaches,
+identify assumptions, and analyze mistakes.
+
+In my classroom, I therefore encourage students to make their
+thinking visible through discussion,
+short written explanations,
+polls,
+guided problem solving,
+and questions during proofs and examples.
+I emphasize mathematical communication and interpretation
+rather than presenting mathematics as a sequence of formulas
+to reproduce.
+
+My teaching experiences have repeatedly shown me that students
+can become proficient at executing procedures while remaining
+uncertain about why those procedures work,
+when they apply,
+or how they should change when the structure of a problem
+changes.
+For that reason, I view procedural fluency and conceptual
+understanding as complementary rather than competing goals.
+
+\subsection{Structured active learning}
+
+I incorporate active-learning strategies that require students
+to make mathematical decisions during class.
+The goal is not activity for its own sake,
+but opportunities for students to retrieve knowledge,
+test understanding,
+and reveal misconceptions while learning is still taking
+place.
+
+Depending on the course and topic, I ask students to:
+
+\begin{itemize}
+    \item think about the form or sketch of an answer before
+    carrying out a calculation -  an outlook to the full solution before writing everything down;
+    
+    \item identify which technique
+    is appropriate and explain their decision;
+    
+    \item compare solution strategies with classmates;
+    
+    \item diagnose errors in proposed arguments or
+    calculations;
+    
+    \item interpret a mathematical result verbally or
+    graphically;
+    
+    \item apply a recently introduced idea independently
+    before seeing a complete solution.
+\end{itemize}
+
+These activities help me identify misconceptions early and
+give students practice making the kinds of decisions that
+independent problem solving requires.
+
+I also try to normalize uncertainty and revision.
+Students should be able to propose an idea,
+discover why, if it does not work,
+and use that failure productively.
+Mistakes can provide unusually clear evidence about the
+structure of a concept when they are analyzed rather than
+simply corrected.
+
+\subsection{Conceptual understanding through multiple representations}
+
+Students can easily experience mathematics as a collection of
+isolated formulas and procedures,
+particularly in introductory courses.
+I therefore use multiple representations whenever they
+clarify the underlying structure of an idea:
+symbolic, graphical, numerical, verbal, or computational.
+
+In probability, for example,
+a distribution can be approached through its formula,
+its graph,
+its probabilistic interpretation,
+its moments,
+its relationship to other distributions,
+and simulations illustrating its behavior.
+Moving among these representations helps students understand
+what mathematical objects mean rather than only how to
+manipulate them.
+
+My international teaching experience has reinforced the
+importance of this flexibility.
+Students bring different educational backgrounds,
+intuitions, and problem-solving habits into the classroom.
+Providing more than one entry point into an idea broadens
+access without reducing mathematical rigor.
+
+\subsection{Inclusive teaching and transparent expectations}
+
+I try to ensure that success in my courses does not depend on
+students already knowing the hidden conventions of university
+mathematics.
+I therefore make expectations explicit through learning goals,
+review materials,
+sample problems,
+clearly stated policies,
+and transparent assessment structures.
+
+This approach is especially important in courses containing
+students with different levels of preparation.
+Transparency does not mean making a course less challenging.
+Rather, it means allowing students to direct their effort
+toward learning the intended material instead of guessing what
+the instructor expects.
+
+I also provide multiple ways for students to access course
+materials and seek help.
+For example, by providing
+course materials through a public website
+in both PDF and accessible HTML formats, when the official platforms make accessibility hard,
+while private components of the course such as grades
+and course administration remained accessible through Canvas.
+
+% ============================================================
+% TEACHING RESPONSIBILITIES
+% ============================================================
+
+\newpage
+
+\section{Teaching Experience}
+
+\small
+
+\begin{longtable}{
+@{}
+L{0.14\textwidth}
+L{0.35\textwidth}
+L{0.35\textwidth}
+L{0.11\textwidth}
+L{0.05\textwidth}
+@{}
+}
+
+\toprule
+
+\textbf{Institution} &
+\textbf{Role} &
+\textbf{Course} &
+\textbf{Term} &
+\textbf{Scale} \\
+
+\midrule
+\endhead
+
+% ------------------------------------------------------------
+% UNIVERSITY OF WASHINGTON
+% ------------------------------------------------------------
+
+\multirow{8}{=}{\textbf{University of Washington}}
+
+& \shortstack[l]{Predoctoral Instructor\\Instructor of Record}
+& \shortstack[l]{Probability I\\\textit{MATH/STAT 394}}
+& \shortstack[l]{Summer\\2026}
+& 40 \\
+
+\cmidrule(l){2-5}
+
+& \shortstack[l]{Predoctoral Teaching Associate}
+& \shortstack[l]{Algebra with Applications\\\textit{MATH 111}}
+& \shortstack[l]{Spring\\2026}
+& \shortstack[l]{40\\40} \\
+
+\cmidrule(l){2-5}
+
+& \shortstack[l]{Predoctoral Teaching Associate}
+& \shortstack[l]{Calculus with Analytic Geometry II\\
+\textit{MATH 125}}
+& \shortstack[l]{Winter\\2026}
+& \shortstack[l]{30;\\30} \\
+
+\cmidrule(l){2-5}
+
+& \shortstack[l]{Predoctoral Teaching Associate}
+& \shortstack[l]{Precalculus\\\textit{MATH 120}}
+& \shortstack[l]{Autumn\\2025}
+& \shortstack[l]{30;\\30} \\
+
+\cmidrule(l){2-5}
+
+& \shortstack[l]{Predoctoral Teaching Associate}
+& \shortstack[l]{Linear Optimization\\\textit{MATH 407}}
+& \shortstack[l]{Summer\\2025}
+& 40 \\
+
+\cmidrule(l){2-5}
+
+& \shortstack[l]{Predoctoral Teaching Associate}
+& \shortstack[l]{Calculus with Analytic Geometry III\\
+\textit{MATH 126}}
+& \shortstack[l]{Spring\\2025}
+& \shortstack[l]{40\\40} \\
+
+\cmidrule(l){2-5}
+
+& \shortstack[l]{Predoctoral Teaching Associate}
+& \shortstack[l]{Calculus with Analytic Geometry II\\
+\textit{MATH 125}}
+& \shortstack[l]{Winter\\2025}
+& \shortstack[l]{30\\30} \\
+
+\cmidrule(l){2-5}
+
+& \shortstack[l]{Predoctoral Teaching Associate}
+& \shortstack[l]{Calculus with Analytic Geometry I\\
+\textit{MATH 124}}
+& \shortstack[l]{Autumn\\2024}
+& \shortstack[l]{30\\30} \\
+
+\midrule
+
+% ------------------------------------------------------------
+% UNIVERSITY OF CALGARY
+% ------------------------------------------------------------
+
+\multirow{9}{=}{\textbf{University of Calgary}}
+
+& Graduate Teaching Assistant
+& \shortstack[l]{Statistical Methods in Data Science\\
+\textit{DATA 606}}
+& Winter 2024
+& --- \\
+
+\cmidrule(l){2-5}
+
+& Graduate Teaching Assistant
+& \shortstack[l]{Introduction to Statistical Inquiry\\
+\textit{STAT 213}}
+& Winter 2024
+& --- \\
+
+\cmidrule(l){2-5}
+
+& Graduate Teaching Assistant
+& \shortstack[l]{Introduction to Statistics II\\
+\textit{STAT 217}}
+& Winter 2024
+& --- \\
+
+\cmidrule(l){2-5}
+
+& Graduate Teaching Assistant
+& \shortstack[l]{Statistical Data Analysis\\
+\textit{DATA 602}}
+& Autumn 2023
+& --- \\
+
+\cmidrule(l){2-5}
+
+& Graduate Teaching Assistant
+& \shortstack[l]{Introduction to Statistics I\\
+\textit{STAT 205}}
+& Autumn 2023
+& --- \\
+
+\cmidrule(l){2-5}
+
+& Graduate Teaching Assistant
+& \shortstack[l]{Introduction to Theoretical Statistics\\
+\textit{STAT 323}}
+& Summer 2023
+& --- \\
+
+\cmidrule(l){2-5}
+
+& Graduate Teaching Assistant
+& \shortstack[l]{Linear Methods I\\
+\textit{MATH 211}}
+& Winter 2023
+& --- \\
+
+\cmidrule(l){2-5}
+
+& Graduate Teaching Assistant
+& \shortstack[l]{University Calculus I\\
+\textit{MATH 249/265}}
+& Winter 2023
+& --- \\
+
+\cmidrule(l){2-5}
+
+& Graduate Teaching Assistant
+& Mathematics / Statistics
+& 2022--2024
+& --- \\
+
+\midrule
+
+\textbf{MATH Pro (Canada)}
+& Tutor
+& \shortstack[l]{Mathematics, Probability,\\and Statistics}
+& 2023--2024
+& 50+ \\
+
+\midrule
+
+\textbf{Private / Online}
+& Private Tutor
+& Mathematics and Statistics
+& 2022--2024
+& 50+ \\
+
+\bottomrule
+
+\end{longtable}
+
+\normalsize
+
+% ============================================================
+% COURSE DESCRIPTIONS
+% ============================================================
+
+\section{Course Descriptions}
+
+The following summaries provide context for selected courses
+in which I have served as instructor of record,
+Predoctoral Teaching Associate,
+or Graduate Teaching Assistant.
+
+\subsection{University of Washington}
+
+\paragraph{MATH/STAT 394: Probability I}
+
+An introduction to probability covering
+foundational probability rules,
+conditional probability,
+independence,
+random variables,
+expectation and variance,
+discrete and continuous distributions,
+transformations,
+joint distributions, 
+ probabilistic limit ideas, and modes of convergence.
+The course emphasizes both mathematical reasoning and the
+interpretation of probabilistic models.
+
+\paragraph{MATH 111: Algebra with Applications}
+
+An introductory quantitative-reasoning course emphasizing
+algebraic modeling,
+graphs,
+exponential and logarithmic functions,
+and applications arising in business and economics.
+
+\paragraph{MATH 120: Precalculus}
+
+A preparatory course for the calculus sequence covering
+functions,
+trigonometry,
+exponential and logarithmic models,
+polynomial and rational functions,
+and foundational analytical skills.
+
+\paragraph{MATH 124: Calculus with Analytic Geometry I}
+
+The first course in the standard calculus sequence,
+focusing on limits,
+continuity,
+differentiation,
+optimization,
+and applications of derivatives.
+
+\paragraph{MATH 125: Calculus with Analytic Geometry II}
+
+The second course in the calculus sequence,
+emphasizing integration,
+the Fundamental Theorem of Calculus,
+applications of integration,
+and sequences and series.
+
+\paragraph{MATH 126: Calculus with Analytic Geometry III}
+
+The third course in the calculus sequence,
+including Taylor expansions,
+vectors and geometry in three dimensions,
+partial derivatives,
+multiple integration,
+and multivariable applications.
+
+\paragraph{MATH 407: Linear Optimization}
+
+An upper-division course in linear optimization,
+including linear programming,
+convexity,
+duality,
+simplex-type methods,
+and mathematical modeling.
+
+% ============================================================
+% INDEPENDENT COURSE DESIGN
+% ============================================================
+
+\newpage
+
+\section{Independent Course Design:}
+
+\subsection{Course context and instructional responsibility}
+
+In Summer 2026,
+I served as instructor of record for
+\textbf{MATH/STAT 394: Probability I}
+at the University of Washington. I was responsible for making course-level decisions about
+content creation and organization,
+assessment,
+student support,
+communication,
+accessibility,
+and the relationship among lectures,
+homework,
+review materials,
+and examinations. The course was taught in a hybrid
+format.
+I developed and maintained a public course website containing
+the syllabus,
+homework assignments and solutions,
+lecture slides,
+annotated lecture materials,
+supplementary notes,
+exam materials,
+interactive probability resources,
+and an optional project.
+
+\subsection{Public and accessible course infrastructure}
+
+A major goal in designing the course website was to reduce unnecessary
+organizational barriers.
+Students should be able to locate materials easily and
+understand how different resources fit together.
+
+I therefore maintained a dedicated public course website, covering all the required material students need:
+
+\begin{center}
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/}
+{\texttt{armanjg.github.io/MATH-394-Probability-1-v2/}}
+\end{center}
+
+The site included homework assignments, their
+solutions,
+midterm and final examination materials and their solutions,
+practice and review resources, question banks, practice exams,
+lecture slides, 
+annotated lecture slides, recorded lecture videos,
+supplementary probability notes,
+interactive visualizations,
+and the project guide.
+
+\subsection{Curriculum organization}
+
+I designed the course so that new probability concepts were
+connected explicitly to earlier ideas. For example,
+when introducing the exponential distribution,
+I connected it to the previously studied geometric
+distribution.
+The comparison provided an opportunity to distinguish
+continuous and discrete waiting-time models while reinforcing
+the broader conceptual role of memorylessness. Similarly,
+new continuous distributions were used as opportunities to
+revisit probability density functions,
+normalization,
+expectation,
+and variance.
+Later topics therefore functioned not only as new material but
+also as structured retrieval of earlier concepts. The course moved among mathematical derivation,
+probabilistic interpretation,
+visualization,
+and application.
+My aim was for students to understand both how probability
+calculations are performed and what the resulting quantities
+mean; see the
+\hyperref[appendix:math394-syllabus]{Course Syllabus} for a detailed topics' schedule.
+
+\subsection{Homework and structured practice}
+
+
+The weekly homework sequence served several purposes:
+regular practice,
+development of mathematical reasoning,
+preparation for examinations,
+and exposure to problems requiring students to combine ideas
+rather than reproduce a single classroom example. Detailed solutions were released after the deadlines to allow students to revisit
+their reasoning.
+These solutions were written as instructional documents rather
+than answer keys,
+with mathematical steps and explanations presented in a form
+students could use for later review.
+
+The \hyperref[appendix:math394-hw1]{first homework set}
+and \hyperref[appendix:math394-hw8]{final homework set}
+are included in the appendix as examples of the development of the
+course from foundational probability ideas to later topics.
+\subsection{Assessment design}
+
+Assessment was organized around
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/}{homework},
+a
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Exams/midterm.pdf}
+{midterm examination},
+a cumulative
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Exams/final.pdf}
+{final examination},
+an optional
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/project.pdf}
+{mini-project},
+and active classroom participation through
+\href{https://edstem.org/}{Ed Discussion}
+questions.
+Detailed
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Exams/midterm_solution.pdf}
+{midterm}
+and
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Exams/final_solution.pdf}
+{final solutions}
+were provided to clarify grading expectations and enhance students'
+understanding of the material.
+
+The midterm and final were designed to evaluate more than
+formula recall.
+Questions required students to identify appropriate
+probabilistic structures,
+carry out mathematical calculations,
+and interpret results.
+
+Substantial assessment preparation was provided
+including
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Exams/midterm_practice.pdf}
+{midterm practice} that simulated the midterm, along with
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Exams/midterm_practice_solution.pdf}{solutions},
+a
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Exams/midterm-question-bank.pdf}
+{midterm question bank},
+and a
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Exams/final-question-bank.pdf}
+{final question bank}.
+The goal was to make the learning targets transparent without
+making the assessments mechanical.
+
+
+
+The purpose of the project was to create an additional
+opportunity for students to engage with probability beyond the
+standard textbook structure.
+It provided a different mode of mathematical engagement and
+allowed students to conduct research in and communicate probability.
+ 
+
+\subsection{Technology and interactive resources}
+
+Technology was used when it served a clear pedagogical
+purpose.
+
+During lectures,
+I used Poll Everywhere for low-stakes checks of understanding.
+For example,
+after learning a new topic,
+students could attempt a related question independently before
+we discussed the answer, and check their correctness unanimously. This provided immediate information about student
+understanding.
+When responses were divided between correct and incorrect
+answers,
+I could ask students to diagnose whether the difficulty arose
+from algebraic manipulation or from the probability concept
+itself.
+
+I also developed  interactive resources illustrating
+probabilistic ideas,
+including
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Figures/pdfpmf.html}
+{properties of cumulative distribution functions},
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Figures/normal-binomial-interactive.html}
+{normal approximations},
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Figures/bivariate.html}
+{bivariate normal distributions},
+and
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/Figures/normal_sample_mean_convergence.html}
+{convergence of sample means for several distributions}.
+
+These visual and computational representations complemented
+the symbolic development presented in lecture.
+
+\subsection{Hybrid instruction}
+
+Teaching a hybrid course required attention to students
+participating through different modalities. I maintained digital access to lecture materials so that students could revisit course
+content outside the classroom.
+Students attending remotely could also participate through
+ Zoom. The experience reinforced the importance of designing
+activities that do not unintentionally privilege only the
+students physically closest to the instructor.
+
+% ============================================================
+% INSTRUCTIONAL PRACTICES
+% ============================================================
+
+\section{Instructional Practices and Pedagogical Strategies}
+
+\subsection{Connecting new ideas to prior knowledge}
+
+I regularly introduce new concepts by asking students to
+retrieve something they already know.
+ This practice has two purposes. First,
+it makes prior knowledge available when students need it.
+Second,
+it helps students organize mathematics as a connected system
+rather than a sequence of isolated topics.
+
+\subsection{Checks for understanding}
+
+I use questions,
+polls,
+short independent attempts,
+and student explanations to obtain evidence about
+understanding during instruction.
+
+A particularly useful pattern is:
+
+\begin{enumerate}
+    \item introduce or derive an idea;
+    \item work through an example;
+    \item ask students to apply a closely related idea
+    independently;
+    \item inspect the distribution of responses;
+    \item discuss the reasoning behind both correct and
+    incorrect approaches.
+\end{enumerate}
+
+The value of the final step is especially important.
+A wrong answer can arise from a conceptual misunderstanding,
+an algebraic error,
+a notation problem,
+or a misreading of the question.
+Distinguishing among these possibilities produces more useful
+feedback than simply displaying the correct answer.
+
+\subsection{Building supportive learning environments}
+
+Mathematics courses can produce substantial anxiety and
+self-doubt. I therefore try to create a classroom culture in which asking
+questions,
+revising one's thinking,
+and learning through mistakes are treated as normal parts of
+mathematical work.
+I also recognize that students learn at different paces and benefit from encountering material through multiple modalities. Students may differ in how  they process auditory, visual, verbal, and experiential information, as well as in their prior knowledge and cognitive strategies. Rather than relying on a single mode of instruction, my courses  use a multimodal and active-learning approach that combines guided examples, conceptual discussion, written explanation, visualization, individual practice, and anonymous polling. This variety helps reduce cognitive barriers and gives students multiple opportunities to encode, process, and retrieve important concepts.
+
+% ============================================================
+% ASSESSMENT AND FEEDBACK
+% ============================================================
+
+
+\section{Assessment, Feedback, and Academic Integrity}
+
+\subsection{Assessment philosophy}
+
+Assessment should reward the forms of  thinking
+that a course claims to value.
+
+In my assessment design and grading,
+I emphasize:
+
+\begin{itemize}
+
+    \item \textbf{Correctness:}
+     reasoning and conclusions should be
+    accurate;
+
+    \item \textbf{Reasoning:}
+    students should show why a method or result is justified;
+
+    \item \textbf{Method selection:}
+    students should recognize which  tool is
+    appropriate;
+
+    \item \textbf{Communication:}
+    notation and logical structure should make reasoning
+    understandable;
+
+    \item \textbf{Interpretation:}
+    students should understand what an  answer
+    means in context.
+
+\end{itemize}
+
+\subsection{Feedback that students can use}
+
+Feedback is most useful when students can translate it into a
+specific future action.
+
+When possible,
+my feedback therefore identifies:
+
+\begin{itemize}
+
+    \item something in the student's reasoning that should be
+    retained;
+
+    \item the highest-leverage correction or improvement;
+
+    \item a specific next step for practice or review.
+
+\end{itemize}
+
+I also use class-wide feedback when several students encounter
+the same difficulty.
+In such cases,
+an error pattern becomes evidence about instruction,
+not merely about individual performance.
+
+\subsection{Academic integrity and productive collaboration}
+
+I distinguish explicitly between productive collaboration and
+outsourcing mathematical thinking.
+
+Students benefit from discussing concepts,
+comparing strategies,
+and asking questions.
+At the same time,
+submitted work should represent the student's own
+understanding and should comply with the specific collaboration
+rules of the assignment.
+
+My broader goal is to frame academic integrity as part of
+learning rather than only as a disciplinary rule:
+students should use outside help in ways that increase,
+rather than replace,
+their ability to reason independently.
+
+% ============================================================
+% TEACHING EFFECTIVENESS
+% ============================================================
+
+\newpage
+
+\section{Teaching Effectiveness}
+
+\subsection{Student evaluations across courses}
+
+Student feedback across my teaching appointments has repeatedly
+highlighted conceptual explanation,
+accessibility,
+responsiveness to questions,
+and the use of structured problem solving.
+
+Representative comments from earlier University of Washington
+courses include:
+
+\begin{quote}
+``Arman's advanced understanding of mathematics gave a broader
+point of view towards the material comparatively to the
+curriculum itself.''
+\end{quote}
+
+\begin{quote}
+``The content actually made more sense when he would break it
+down into different steps to further expand your thinking.''
+\end{quote}
+
+\begin{quote}
+``Arman was really helpful in answering my questions.
+He was able to explain complex problems really well.
+What I learned during the quiz section helped me perform
+better on the exams.''
+\end{quote}
+
+\begin{quote}
+``Arman was great at explaining the math material and was
+always willing to go beyond simply teaching what he has to
+teach and allowing us to understand the material better by
+exploring the concepts clearer.''
+\end{quote}
+
+Students have also emphasized the value of support outside
+scheduled class time:
+
+\begin{quote}
+``Definitely the extra review material that he provided along
+with the Zoom meetings and extra review time for exams.''
+\end{quote}
+
+\begin{quote}
+``I think the time given to ask questions about the homework
+contributed the most to my learning because that was what gave
+me the most clear understanding on what I was being asked to
+do.''
+\end{quote}
+
+Complete evaluation reports are included in the appendix
+[\hyperref[appendix:teaching-evaluations]{Teaching Evaluation Reports}].
+% ------------------------------------------------------------
+% MATH 394 EVALUATIONS
+% ------------------------------------------------------------
+\subsection{MATH/STAT 394 Probability I:
+Summer 2026 student feedback}
+
+The course enrolled 21 students,
+of whom 14 completed the evaluation,
+for a response rate of approximately 67\%.
+The combined overall median was 4.1 out of 5,
+while the median rating for instructor contribution was
+4.5 out of 5.
+Teaching effectiveness received a median of 4.0 out of 5.
+Students also rated the use of examples highly,
+with a median of 4.7 out of 5,
+and assessment and grading received a median of
+4.6 out of 5.
+The Challenge and Engagement Index was 5.0 out of 7
+[\hyperref[appendix:math394-eval]{Official Student Evaluation}].
+
+Written feedback reinforced several themes that were also
+visible in the numerical evaluation.
+Students particularly valued the organization and availability
+of course materials,
+including the website,
+slides,
+annotated slides,
+recordings,
+visualizations,
+homework solutions,
+and exam-preparation resources.
+
+At the same time,
+student feedback identified an important area for improvement.
+Some students perceived a gap between the difficulty of
+examples developed in lecture and the most challenging
+homework problems. I view this as useful evidence for future course design.
+A revision of the course should preserve challenging homework
+while providing a more explicit bridge between foundational
+examples and problems requiring several ideas to be combined.
+Possible revisions include intermediate ``bridge'' problems,
+shorter in-class challenge problems,
+and more explicit discussion of how familiar techniques are
+assembled in unfamiliar settings.
+% ============================================================
+% OBSERVATION REPORT
+% ============================================================
+\subsection{Supervisory and mentor observations}
+
+My teaching has been observed at multiple stages of my work. They
+ identify several recurring strengths in my teaching:
+clear mathematical communication,
+careful preparation,
+organization,
+a calm and approachable classroom presence,
+and deliberate attention to student understanding.
+
+In an early observation of my calculus teaching,
+Clare Minnerath emphasized both clarity and classroom presence.
+They noted that my board work was organized,
+my voice was clear,
+and that I responded constructively to student questions and incomplete
+answers.
+
+Her overall assessment was that
+``Arman appeared confident and experienced at the board.''
+
+A later observation by Dr.\ Andrew Loveless similarly emphasized
+approachability,
+organization,
+and student engagement.
+He noted that I circulated throughout the room,
+spoke individually with students,
+and created an environment in which students were actively discussing
+mathematics with one another.
+He described the atmosphere as calm and low-pressure
+and observed that my explanations at the board were logically organized
+and easy to follow.
+As he wrote,
+``Students were engaged and working diligently,''
+and concluded that
+``You are building a solid classroom presence.''
+
+The observation of my Probability I course identified many of the same
+qualities in the context of a course for which I had full instructional
+responsibility.
+The report described the lecture as
+``effective and carefully prepared''
+and emphasized the strength of the course infrastructure,
+including the organized course website,
+review materials,
+posted solutions,
+and lecture notes.
+It also noted that my explanations were
+``calm, well paced, and well matched to the course level.''
+Particular attention was given to the way I connected new material to
+previous ideas,
+for example by relating the exponential distribution to the geometric
+distribution and by revisiting the definition of a probability density
+function while introducing new content.
+
+The report also highlighted my use of formative assessment.
+A Poll Everywhere activity asked students to apply a recently introduced
+idea independently,
+after which I used the distribution of responses to distinguish
+conceptual misunderstandings from algebraic errors.
+The observer described this as a particularly effective instructional
+choice because it made student thinking visible and created an opportunity
+to respond directly to the source of students' difficulties.
+The learning environment was characterized as
+``calm, supportive, and professionally organized,''
+with students asking thoughtful questions and engaging with the
+mathematical development.
+
+Taken together,
+these observations show a consistent pattern across my teaching:
+strong preparation and mathematical clarity,
+an approachable and supportive classroom environment,
+and an increasing emphasis on making student thinking visible during
+instruction.
+They have also helped identify a clear direction for continued growth:
+creating more frequent low-stakes opportunities for students to predict,
+discuss,
+compare approaches,
+and contribute during class.
+I have incorporated these recommendations into my continuing development
+as an instructor through more structured peer discussion,
+retrieval questions,
+anonymous polling,
+and brief opportunities for students to attempt a problem before seeing
+a complete solution.
+
+
+\noindent\textbf{Observation Reports:}
+\begin{itemize}
+    \item \hyperref[appendix:obs2]
+    {Clare Minnerath --- MATH 124: Calculus with Analytic Geometry I}
+
+    \item \hyperref[appendix:obs1]
+    {Dr.\ Andrew Loveless --- MATH 125: Calculus with Analytic Geometry II}
+
+    \item \hyperref[appendix:math394-observation]
+    {Dr. Natalie Naehrig --- MATH/STAT 394: Probability I}
+\end{itemize}
+
+% ============================================================
+% EXTERNAL TUTORING
+% ============================================================
+
+\subsection{Individualized instruction}
+
+My external tutoring experience has provided a complementary
+setting for developing teaching skills.
+
+My Superprof profile documents a 5/5 rating from 17 reviews
+and more than 50 students accompanied through the platform.
+
+Tutoring has repeatedly shown me that a student's visible
+error is not always the underlying problem.
+A difficulty with calculus,
+for example,
+may originate in algebraic fluency;
+a difficulty with probability may arise from interpretation
+rather than computation.
+
+As a result,
+I have become more deliberate about diagnosing the source of a
+difficulty before explaining a solution.
+This habit now influences my classroom teaching:
+when students produce different answers,
+I try to determine whether the divergence reflects notation,
+algebra,
+conceptual understanding,
+or interpretation.
+
+Tutoring has also reinforced the importance of gradually
+reducing instructional support.
+A successful explanation should not merely allow a student to
+follow the instructor's reasoning;
+it should eventually allow the student to reproduce,
+adapt,
+and extend that reasoning independently.
+
+% ============================================================
+% TEACHING ARTIFACTS
+% ============================================================
+
+\newpage
+
+\section{Selected Teaching Artifacts}
+
+The artifacts below illustrate how my teaching philosophy is
+implemented in actual course design.
+Rather than presenting materials without context,
+I describe the pedagogical purpose of each artifact.
+
+\subsection{Artifact 1: MATH/STAT 394 course website}
+
+\textbf{Artifact:}
+Public Summer 2026 Probability I website.
+
+\begin{center}
+\href{https://armanjg.github.io/MATH-394-Probability-1-v2/}
+{\texttt{MATH/STAT 394: Probability I}}
+\end{center}
+
+\textbf{Why this matters.}
+The website illustrates my emphasis on transparency,
+organization,
+and accessibility.
+Students had a central location for the syllabus,
+homework,
+solutions,
+lecture materials,
+assessment preparation,
+supplementary resources,
+and interactive visualizations.
+Providing both PDF and HTML formats also gave students
+multiple ways to access course materials.
+
+\subsection{Artifact 2: Homework 1 and Homework 8 solutions}
+
+\textbf{Artifacts:}
+Sample solutions from the beginning and end of the course.
+
+\textbf{Why this matters.}
+These materials show how I use written solutions as
+instructional resources rather than simply answer keys.
+Including artifacts from both ends of the course also
+illustrates the progression from foundational probability
+ideas toward more advanced probabilistic reasoning.
+The solutions give students a model of mathematical
+communication that can be revisited independently.
+
+\subsection{Artifact 3: Midterm examination and preparation materials}
+
+\textbf{Artifacts:}
+Midterm,
+practice material,
+review resources,
+and solutions.
+
+\textbf{Why this matters.}
+These materials illustrate my approach to transparent
+assessment.
+Students should know the concepts and forms of reasoning that
+an assessment is intended to evaluate.
+The assessment itself can remain rigorous while review
+materials reduce unnecessary uncertainty about expectations.
+
+\subsection{Artifact 4: Final examination}
+
+\textbf{Artifact:}
+Cumulative Probability I final examination.
+
+\textbf{Why this matters.}
+The final illustrates the cumulative structure of the course
+and the expectation that students integrate concepts rather
+than treat each distribution or technique in isolation.
+It also provides evidence of my experience designing and
+administering a complete university-level assessment as
+instructor of record.
+
+\subsection{Artifact 5: Mini-project}
+
+\textbf{Artifact:}
+Optional Probability I mini-project.
+
+\textbf{Why this matters.}
+The project created an alternative mode of engagement beyond
+traditional timed examinations and weekly homework.
+It reflects my interest in giving students opportunities to
+work with mathematical ideas in extended and communicative
+formats.
+
+% ============================================================
+% MENTORING
+% ============================================================
+
+\section{Mentoring, Advising, and Student Support}
+
+\subsection{Mentoring philosophy}
+
+I view mentoring as both academic guidance and translation of
+the hidden curriculum.
+
+Students often need help not only with mathematical content
+but also with questions such as:
+How should I study for this kind of course?
+How do I know whether I understand a concept?
+How should I use office hours?
+How do I recover after a disappointing assessment?
+How do I turn feedback into a concrete change in study
+strategy?
+
+My goal is therefore to help students develop systems for
+learning,
+not simply solve the immediate problem in front of them.
+
+\subsection{International student mentoring}
+
+At the University of Calgary,
+I participated in mentoring and community-building activities
+for international and graduate students.
+My own experience moving across educational systems made me
+particularly aware of the academic and social adjustment that
+can accompany international study.
+
+In mentoring conversations,
+I emphasized practical navigation of university expectations,
+connection to available resources,
+and the normalization of asking for help during transitions.
+
+\subsection{Individualized tutoring}
+
+My work with high-school,
+undergraduate,
+and university students has included individualized learning
+plans,
+exam preparation,
+and support for students returning to mathematics after gaps
+in their education.
+
+These experiences strengthened my ability to adjust the level,
+pace,
+and representation of an explanation to the student in front
+of me rather than relying on a single standard explanation.
+
+% ============================================================
+% LEADERSHIP AND SERVICE
+% ============================================================
+
+\section{Curriculum Development,
+Educational Leadership,
+and Service}
+
+\subsection{Curriculum and instructional development}
+
+My Summer 2026 Probability I course gave me direct experience
+with curriculum-level instructional decisions.
+
+I developed the course website,
+organized the sequence of lecture materials,
+prepared homework and solutions,
+designed examinations and review materials,
+incorporated interactive resources,
+and revised instructional decisions in response to student
+needs.
+
+This experience expanded my perspective from the design of an
+individual quiz section to the alignment of an entire course.
+
+\subsection{Teaching-related leadership and service}
+
+My teaching-related service has included leadership in the
+Graduate University Mathematics \& Statistics Society at the
+University of Calgary,
+participation in the Calgary Junior High Math Contest,
+and community engagement work.
+
+As President of GUMS,
+I participated in graduate-student advocacy and
+community-building within mathematics and statistics.
+This experience reinforced the importance of academic
+communities in which students have access to peers,
+information,
+and opportunities for participation.
+
+My work connected to the Calgary Junior High Math Contest
+provided experience with mathematical outreach and the
+evaluation of student mathematical work outside the standard
+university classroom.
+
+% ============================================================
+% PROFESSIONAL DEVELOPMENT
+% ============================================================
+
+\section{Professional Development in Teaching}
+
+I completed the
+\href{https://taylorinstitute.ucalgary.ca/programs-and-courses/programs/certificate}
+{Graduate Student Certificate in University Teaching and Learning}
+through the Taylor Institute for Teaching and Learning at the
+University of Calgary.
+
+The program strengthened my understanding of
+research-informed teaching,
+course design,
+assessment,
+inclusive pedagogy,
+and reflective practice.
+
+The certificate included the following components.
+
+\begin{itemize}
+
+\item
+\textbf{Diversity, Equity, and Inclusion
+[Appendix~\ref{appendix:edi}].}
+
+This component focused on equity,
+diversity,
+inclusion,
+and accessibility in postsecondary teaching.
+It encouraged reflection on barriers to participation,
+representation,
+classroom structure,
+and the design of learning environments that support students
+from different backgrounds.
+
+\item
+\textbf{Emerging Teachers Development
+[Appendix~\ref{appendix:teachers}].}
+
+This component focused on foundational skills in university
+teaching,
+including instructional design,
+student engagement,
+classroom facilitation,
+and reflective professional development.
+
+\item
+\textbf{Theories and Practices
+[Appendix~\ref{appendix:theories}].}
+
+This component examined theories of student learning,
+course and curriculum design,
+assessment,
+and evidence-based approaches to postsecondary education.
+
+\item
+\textbf{Developing Your Teaching Dossier
+[Appendix~\ref{appendix:teaching-dossier}].}
+
+This component focused on articulating a teaching philosophy,
+connecting that philosophy to instructional practice,
+and documenting teaching effectiveness through multiple forms
+of evidence.
+
+\end{itemize}
+
+Together,
+these experiences strengthened my ability to connect
+instructional decisions to pedagogical evidence and to treat
+teaching as an activity that should be systematically
+evaluated and refined.
+
+% ============================================================
+% CONFERENCES
+% ============================================================
+
+\subsection{Teaching and Learning Conferences}
+
+I value opportunities to engage with broader conversations in
+higher education,
+exchange ideas with colleagues,
+and learn about new approaches to inclusive and
+evidence-based teaching.
+
+My professional-development activities have included:
+
+\begin{tabular*}{\textwidth}
+{@{\extracolsep{\fill}}p{0.82\textwidth}r@{}}
+
+\textbf{MAA MathFest},
+Boston, Massachusetts
+& 2026 \\[0.3em]
+
+\textbf{POD Network Conference},
+Denver, Colorado
+& 2025 \\[0.3em]
+
+\textbf{Joint Mathematics Meetings (JMM) ---
+MAA Teaching and Pedagogy Sessions},
+Seattle, Washington
+& 2025 \\[0.3em]
+
+\textbf{STLHE Annual Conference},
+Niagara Falls, Ontario
+& 2024 \\[0.3em]
+
+\textbf{Canadian Society for the Study of Education
+Annual Conference},
+Toronto, Ontario
+& 2023 \\[0.3em]
+
+\textbf{Alberta Mathematics Dialogue},
+Banff, Alberta
+& 2023 \\
+
+\end{tabular*}
+
+% ============================================================
+% REFLECTION
+% ============================================================
+
+\newpage
+
+\section{Reflection and Continuous Improvement}
+
+I understand teaching as a cycle of planning,
+implementation,
+observation,
+feedback,
+and revision.
+
+In practice,
+this means identifying recurring learning bottlenecks,
+designing targeted supports,
+and evaluating those supports through student questions,
+participation,
+performance patterns,
+evaluations,
+and supervisory feedback.
+
+My Summer 2026 Probability I experience provides a useful
+example.
+
+Several sources of evidence converged on strengths in course
+organization,
+clarity,
+resources,
+and mathematical explanation.
+At the same time,
+student feedback suggested that the transition from classroom
+examples to difficult homework could sometimes be made more
+gradual,
+while the mentor observation suggested increasing the
+frequency and distribution of student participation.
+
+These findings are complementary rather than contradictory.
+They suggest that my next stage of development should preserve
+the strong course infrastructure and mathematical clarity
+while increasing the amount of intellectual work students do
+during class.
+
+For a future iteration of Probability I,
+I would therefore:
+
+\begin{itemize}
+
+    \item add short ``bridge'' problems between introductory
+    examples and the most demanding homework problems;
+
+    \item use more frequent low-stakes prediction and retrieval
+    questions;
+
+    \item incorporate brief student-to-student discussion before
+    selected whole-class explanations;
+
+    \item use hybrid tools such as polls and chat more
+    systematically to include remote students;
+
+    \item move more quickly through routine technical
+    calculations when students already possess the prerequisite
+    skill;
+
+    \item use the time gained for interpretation,
+    conceptual comparison,
+    and student reasoning.
+
+\end{itemize}
+
+This process reflects how I understand professional growth in
+teaching.
+Effective teaching is not a fixed personal characteristic.
+It is a scholarly practice that requires evidence,
+reflection,
+experimentation,
+and revision.
+
+% ============================================================
+% FUTURE GOALS
+% ============================================================
+
+\section{Future Teaching Goals and Development Plan}
+
+\subsection{Near-term goals}
+
+Over the next year,
+my primary teaching-development goals are:
+
+\begin{enumerate}
+
+\item
+\textbf{Refine independent course design.}
+
+Revise the Probability I materials by strengthening the bridge
+between lecture examples and the most demanding homework
+problems,
+while preserving the conceptual depth of the course.
+
+\item
+\textbf{Increase distributed participation.}
+
+Develop more frequent low-stakes opportunities for every
+student to predict,
+retrieve,
+discuss,
+or apply mathematical ideas during class.
+
+\item
+\textbf{Expand evidence-based assessment.}
+
+Continue designing assessments that combine mathematical
+derivation,
+conceptual interpretation,
+method selection,
+and communication.
+
+\item
+\textbf{Develop reusable and accessible course infrastructure.}
+
+Continue building public course resources,
+annotated materials,
+review guides,
+interactive demonstrations,
+and transparent policies that can support future probability,
+statistics,
+and mathematics courses.
+
+\end{enumerate}
+
+\subsection{Longer-term teaching trajectory}
+
+Having now served as instructor of record,
+I aim to deepen my experience with independent instruction and
+eventually course coordination.
+
+I am particularly interested in teaching probability,
+statistics,
+and gateway mathematics courses,
+where careful course design,
+transparent expectations,
+and well-structured instructional support can have substantial
+effects on students' confidence,
+persistence,
+and preparation for later quantitative work.
+
+% ============================================================
+% APPENDICES
+% ============================================================
+
+\appendix
+
+% ============================================================
+% PREVIOUS TEACHING EVALUATIONS
+% ============================================================
+
+\includepdf[
+pages=-,
+scale=0.75,
+pagecommand={},
+addtotoc={
+1,section,1,
+{Teaching Evaluation Reports},
+appendix:teaching-evaluations,
+1,subsection,2,
+{MATH 120 AB --- Precalculus},
+appendix:math120ab
+}
+]{\appendixdir/evals1.pdf}
+
+\label{appendix:evals}
+
+\includepdf[
+pages=-,
+scale=0.75,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{MATH 126 DB --- Calculus III},
+appendix:math126db
+}
+]{\appendixdir/evals2.pdf}
+
+\includepdf[
+pages=-,
+scale=0.75,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{MATH 120 AA --- Precalculus},
+appendix:math120aa
+}
+]{\appendixdir/evals3.pdf}
+
+\includepdf[
+pages=-,
+scale=0.75,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{MATH 125 BB --- Calculus II},
+appendix:math125bb
+}
+]{\appendixdir/evals4.pdf}
+
+% ============================================================
+% PREVIOUS SUPERVISORY OBSERVATIONS
+% ============================================================
+
+\includepdf[
+pages=-,
+scale=0.75,
+pagecommand={},
+addtotoc={
+1,section,1,
+{Supervisory Observation Reports},
+appendix:supervisory-feedback,
+1,subsection,2,
+{Observation Report 1},
+appendix:obs1
+}
+]{\appendixdir/obs1.pdf}
+
+\includepdf[
+pages=-,
+scale=0.75,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Observation Report 2},
+appendix:obs2
+}
+]{\appendixdir/obs2.pdf}
+
+\includepdf[
+pages=-,
+scale=0.75,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Observation Report 3},
+appendix:obs3
+}
+]{\appendixdir/obs3.pdf}
+
+% ============================================================
+% PROFESSIONAL DEVELOPMENT CERTIFICATES
+% ============================================================
+
+\includepdf[
+pages=-,
+scale=1,
+pagecommand={},
+addtotoc={
+1,section,1,
+{Professional Development Certificates},
+appendix:professional-development,
+1,subsection,2,
+{Graduate Student Certificate in University Teaching and Learning},
+appendix:tfdl
+}
+]{\appendixdir/TFDL.pdf}
+
+
+\includepdf[
+pages=-,
+scale=1,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Emerging Teachers Development Badge},
+appendix:teachers
+}
+]{\appendixdir/teachers.pdf}
+
+
+\includepdf[
+pages=-,
+scale=1,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Theories and Practices Badge},
+appendix:theories
+}
+]{\appendixdir/theories.pdf}
+
+
+\includepdf[
+pages=-,
+scale=1,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Developing Your Teaching Dossier Badge},
+appendix:teaching-dossier
+}
+]{\appendixdir/teaching-dossier.pdf}
+
+
+\includepdf[
+pages=-,
+scale=1,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Equity, Diversity, and Inclusion Badge},
+appendix:edi
+}
+]{\appendixdir/edi.pdf}
+
+
+% ============================================================
+% MATH/STAT 394 --- SUMMER 2026
+% ============================================================
+
+\includepdf[
+pages=-,
+scale=0.82,
+pagecommand={},
+addtotoc={
+1,section,1,
+{MATH/STAT 394 Probability I --- Summer 2026},
+appendix:math394-evidence,
+1,subsection,2,
+{Official Student Evaluation},
+appendix:math394-eval
+}
+]{\appendixdir/evals5.pdf}
+
+% ------------------------------------------------------------
+% Mentor Observation
+% ------------------------------------------------------------
+
+\includepdf[
+pages=-,
+scale=0.82,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Teaching Observation Report},
+appendix:math394-observation
+}
+]{\appendixdir/obs4.pdf}
+
+% ------------------------------------------------------------
+% Syllabus
+% ------------------------------------------------------------
+
+\includepdf[
+pages=-,
+scale=0.82,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Course Syllabus},
+appendix:math394-syllabus
+}
+]{\appendixdir/syllabus.pdf}
+
+% ------------------------------------------------------------
+% Homework sample 1
+% ------------------------------------------------------------
+
+\includepdf[
+pages=-,
+scale=0.82,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Homework 1 --- Sample Solutions},
+appendix:math394-hw1
+}
+]{\appendixdir/HW1-solution.pdf}
+
+% ------------------------------------------------------------
+% Homework sample 2
+% ------------------------------------------------------------
+
+\includepdf[
+pages=-,
+scale=0.82,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Homework 8 --- Sample Solutions},
+appendix:math394-hw8
+}
+]{\appendixdir/HW8-solution.pdf}
+
+% ------------------------------------------------------------
+% Midterm
+% ------------------------------------------------------------
+
+\includepdf[
+pages=-,
+scale=0.82,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Midterm Examination and Solutions},
+appendix:math394-midterm
+}
+]{\appendixdir/midterm_solution.pdf}
+
+% ------------------------------------------------------------
+% Final
+% ------------------------------------------------------------
+
+\includepdf[
+pages=-,
+scale=0.82,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Final Examination},
+appendix:math394-final
+}
+]{\appendixdir/final.pdf}
+
+% ------------------------------------------------------------
+% Mini-project
+% ------------------------------------------------------------
+
+\includepdf[
+pages=-,
+scale=0.82,
+pagecommand={},
+addtotoc={
+1,subsection,2,
+{Probability Mini-Project},
+appendix:math394-project
+}
+]{\appendixdir/project.pdf}
+
+\end{document}
