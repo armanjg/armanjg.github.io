@@ -1,0 +1,690 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper,margin=0.82in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=UWpurple,urlcolor=UWpurple,citecolor=UWpurple]{hyperref}
+
+\definecolor{UWpurple}{HTML}{4B2E83}
+\definecolor{UWgold}{HTML}{B7A57A}
+\definecolor{Ink}{HTML}{172033}
+\definecolor{Muted}{HTML}{667085}
+\definecolor{Rule}{HTML}{D9DEE7}
+\definecolor{Soft}{HTML}{F6F4FA}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.40em}
+\setlist[itemize]{leftmargin=1.25em,itemsep=0.12em,topsep=0.18em}
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{2}
+
+\titleformat{\section}{\Large\bfseries\color{Ink}}{}{0pt}{}[\vspace{0.2em}\color{UWgold}\titlerule]
+\titleformat{\subsection}{\large\bfseries\color{UWpurple}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.55em}{0.7em}
+\titlespacing*{\subsection}{0pt}{1.05em}{0.18em}
+
+\setlength{\headheight}{22pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{Muted}Selected Coursework}
+\fancyhead[R]{\small\color{Muted}Arman Jahangiri}
+\fancyfoot[C]{\small\color{Muted}\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{Rule}\leaders\hrule height \headrulewidth\hfill}}
+
+\newcommand{\sourceurl}[1]{\par{\footnotesize\color{Muted}\textbf{Source:} \url{#1}}}
+\newcommand{\coursenote}[1]{\par{\small\color{Muted}\emph{#1}}}
+\newcommand{\coursemeta}[1]{\par\vspace{-0.05em}{\small\color{Muted}\emph{#1}}\par\vspace{0.15em}}
+\newcommand{\coursebreak}{\par\vspace{0.35em}{\color{Rule}\hrule}\vspace{0.58em}}
+
+\begin{document}
+
+\thispagestyle{empty}
+\vspace*{0.65in}
+{\color{UWpurple}\rule{0.95in}{2.5pt}}\\[1.05em]
+{\Huge\bfseries\color{Ink}Selected Coursework}\\[0.55em]
+{\Large\color{Muted}Arman Jahangiri}\\[0.9em]
+
+
+\begin{minipage}{0.93\textwidth}
+\color{Muted}
+\end{minipage}
+
+\vfill
+{\small\color{Muted}Updated October 2026 \quad $\cdot$ \quad \href{https://armanjg.github.io/}{armanjg.github.io}}
+\newpage
+
+\tableofcontents
+\newpage
+\section{Statistical Inference \& Statistical Methods}
+\subsection{Causal Modeling (STAT 566 / CSSS 566)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Construction of causal hypotheses. Theories of causation, counterfactuals, intervention vs. passive observation. Contexts for causal inference: randomized experiments; sequential randomization; partial compliance; natural experiments, passive observation. Path diagrams, conditional independence, and d-separation. Model equivalence and causal under-determination.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Judea Pearl, \emph{Causality: Models, Reasoning, and Inference}, 2nd ed.
+\item Miguel A. Hern\'an and James M. Robins, \emph{Causal Inference: What If} (aligned reference).
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-566}
+\coursenote{Representative references aligned with the official causal-modeling topics; readings may vary by instructor.}
+\coursebreak
+
+\subsection{Sampling Mechanisms and Implications for Statistical Analysis (STAT 507)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Data collection and survey design for research studies; statistical methods appropriate to the resulting data; how sampling and assignment mechanisms determine the validity and scope of conclusions; selection mechanisms, sources of bias, confounding, and incomplete data; implications for estimation and regression-based analysis.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Sharon L. Lohr, \emph{Sampling: Design and Analysis}, 3rd ed. (aligned survey-sampling reference).
+\item Carl-Erik S\"arndal, Bengt Swensson, and Jan Wretman, \emph{Model Assisted Survey Sampling} (aligned reference).
+\item Instructor notes and case studies on sampling mechanisms, selection, bias, and missingness.
+\end{itemize}
+\sourceurl{https://www.biostat.washington.edu/academics/courses/stat/507}
+\coursenote{The topic list follows the official UW description; the books are representative references closely aligned with the course.}
+\coursebreak
+\subsection{Statistical Inference I (STAT 512)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Review of random variables; transformations, conditional expectation, moment generating functions, convergence, limit theorems, estimation; Cramer-Rao lower bound, maximum likelihood estimation, sufficiency, ancillarity, completeness. Rao-Blackwell theorem. Hypothesis testing: Neyman-Pearson lemma, monotone likelihood ratio, likelihood-ratio tests, large-sample theory. Contingency tables, confidence intervals, invariance. Decision theory.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item George Casella and Roger L. Berger, \emph{Statistical Inference}, 2nd ed.
+\item Steven F. Arnold, \emph{Mathematical Statistics} (supplementary theory reference).
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-512}
+\coursenote{These texts align with UW's published statistical-theory exam syllabus and the course sequence.}
+\coursebreak
+\subsection{Statistical Inference II (STAT 513)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Review of random variables; transformations, conditional expectation, moment generating functions, convergence, limit theorems, estimation; Cramer-Rao lower bound, maximum likelihood estimation, sufficiency, ancillarity, completeness. Rao-Blackwell theorem. Hypothesis testing: Neyman-Pearson lemma, monotone likelihood ratio, likelihood-ratio tests, large-sample theory. Contingency tables, confidence intervals, invariance. Decision theory.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item George Casella and Roger L. Berger, \emph{Statistical Inference}, 2nd ed.
+\item UW STAT 512/513 course packs and instructor notes.
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-513}
+\coursenote{The course sequence uses instructor notes/course packs; Casella--Berger is an aligned core reference.}
+\coursebreak
+
+\subsection{Advanced Theory of Statistical Inference I (STAT 581)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Foundations of parametric statistics: elementary decision theory and Bayesian methods; modes of convergence, central limit theorems, and the delta method; maximum likelihood estimation and regularity; hypothesis testing under fixed and local alternatives; asymptotic optimality and parametric efficiency theory.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item A. W. van der Vaart, \emph{Asymptotic Statistics}.
+\item E. L. Lehmann and George Casella, \emph{Theory of Point Estimation}, 2nd ed. (aligned reference).
+\item E. L. Lehmann and Joseph P. Romano, \emph{Testing Statistical Hypotheses}, 3rd ed. (aligned reference).
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-581}
+\coursenote{The topic list follows the official UW course description; references are standard texts aligned with the parametric asymptotic theory covered in the sequence.}
+\coursebreak
+
+\subsection{Advanced Theory of Statistical Inference II (STAT 582)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Semiparametric and nonparametric estimation of irregular parameters; minimax rates of convergence; kernel methods and the bias--variance tradeoff; concentration inequalities; empirical risk minimization; Rademacher complexity and Vapnik--Chervonenkis dimension; covering and bracketing numbers; Glivenko--Cantelli theory and empirical processes.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item A. W. van der Vaart, \emph{Asymptotic Statistics}.
+\item A. W. van der Vaart and Jon A. Wellner, \emph{Weak Convergence and Empirical Processes}.
+\item Sara van de Geer, \emph{Empirical Processes in M-Estimation}.
+\item Alexandre B. Tsybakov, \emph{Introduction to Nonparametric Estimation}.
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-582}
+\coursenote{These references are listed or used in recent UW STAT 582 syllabi; the topic list follows the official course description.}
+\coursebreak
+
+\subsection{Advanced Theory of Statistical Inference III (STAT 583)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Semiparametric and nonparametric estimation of regular parameters; weak convergence and Donsker empirical-process theory; asymptotic linearity; estimating equations and U-statistics; the functional delta method; semiparametric efficiency theory; influence functions and construction of efficient estimators.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item A. W. van der Vaart, \emph{Asymptotic Statistics}.
+\item A. W. van der Vaart and Jon A. Wellner, \emph{Weak Convergence and Empirical Processes}.
+\item Peter J. Bickel, Chris A. J. Klaassen, Ya'acov Ritov, and Jon A. Wellner, \emph{Efficient and Adaptive Estimation for Semiparametric Models} (aligned reference).
+\item Robert J. Serfling, \emph{Approximation Theorems of Mathematical Statistics} (aligned reference for U-statistics and asymptotic theory).
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-583}
+\coursenote{The topic list follows the official UW course description and recent offerings of the advanced theory sequence.}
+\coursebreak
+
+\subsection{Advanced Regression Methods for Independent Data (STAT 570)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Linear, generalized linear, and nonlinear regression; interpretation of model parameters, including collapsibility and non-collapsibility; estimating equations; likelihood and sandwich estimators; bootstrap methods; Bayesian inference, prior specification, hypothesis testing and computation; comparison of inferential approaches; model assessment and diagnostics.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Peter McCullagh and John A. Nelder, \emph{Generalized Linear Models}, 2nd ed. (aligned reference).
+\item A. C. Davison, \emph{Statistical Models} (aligned reference).
+\item Jon Wakefield, \emph{Bayesian and Frequentist Regression Methods} (aligned reference).
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-570}
+\coursenote{UW provides instructor syllabi for recent offerings; the books listed here are representative references aligned with the published topics rather than a claim of a single required text.}
+\coursebreak
+
+\subsection{Advanced Regression Methods for Dependent Data (STAT 571)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Longitudinal data; generalized linear and nonlinear mixed models; marginal versus conditional modeling; generalized estimating equations; likelihood-based inference, REML and BLUP; numerical integration; Bayesian inference using Markov chain Monte Carlo; covariance models and split-plot structures; comparison of approaches and diagnostics.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Garrett M. Fitzmaurice, Nan M. Laird, and James H. Ware, \emph{Applied Longitudinal Analysis}, 2nd ed. (aligned reference).
+\item José C. Pinheiro and Douglas M. Bates, \emph{Mixed-Effects Models in S and S-PLUS} (aligned reference).
+\item Peter J. Diggle, Patrick Heagerty, Kung-Yee Liang, and Scott L. Zeger, \emph{Analysis of Longitudinal Data}, 2nd ed. (aligned reference).
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-571}
+\coursenote{UW provides instructor syllabi for recent offerings; these are representative references closely matched to the official course content.}
+\coursebreak
+\subsection{Statistical Inference (STAT 721)}
+\coursemeta{University of Calgary · graduate coursework}
+{\bfseries Topics.} Statistical models, likelihoods, maximum likelihood estimators, likelihood ratio, Wald and score tests, confidence intervals, bounds and regions, Bayesian estimation and testing, basic large sample theory, estimating equations, jackknife, bootstrap and permutation.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Dennis D Boos, L. A Stefanski, Essential Statistical Inference Theory and Methods, Springer Texts in Statistics, 2013.
+\end{itemize}
+\coursebreak
+\subsection{Generalized Linear Models (STAT 635)}
+\coursemeta{University of Calgary · graduate coursework}
+{\bfseries Topics.} Exponential family of distributions, binary data models, loglinear models, overdispersion, quasi-likelihood methods, generalized additive models, longitudinal data and generalized estimating equations, model adequacy checks.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Annete J. Dobson, Adrian G. Barnett, An Introduction to Generalized Linear Models, Third Edition, Chapman \& Hall/CRC Texts in Statistical Science, 2008
+\end{itemize}
+\coursebreak
+\subsection{Asymptotic Statistical Inference (STAT 601.01)}
+\coursemeta{University of Calgary · graduate coursework}
+{\bfseries Topics.} This course focuses on approximation techniques and asymptotic methods in statistics. Topics include different modes of convergence, Slutsky's theorem, Berry-Esséen theorem, Edgeworth expansions, Delta method, Lyapunov's theorem, asymptotic (relative) efficiency and robustness of estimation and testing, asymptotics of likelihood based estimation and testing, nonparametric estimations based on U- and V-statistics.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item E. L. Lehmann, Elements of Large-Sample Theory, Springer Texts in Statistics, 1999
+\end{itemize}
+\coursebreak
+\subsection{Nonparametric Statistics (STAT 601.02)}
+\coursemeta{University of Calgary · graduate coursework}
+{\bfseries Topics.} This course focuses on nonparametric estimation and hypotheses testing. Topics include properties (such as efficiency and robustness) of nonparametric methods vs parametric methods, estimations and tests based on binomial distribution, estimations and tests based on ranks, tests for contingency tables, nonparametric linear regression, nonparametric density estimation (such as kernel estimation) and goodness-of-fit tests (such as Kolmogorov-Smirnov test), re-sampling methods, etc.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item W. J. Conover, Practical Nonparametric Statistics, 3rd Edition, John Wiley \& Sons, Inc. 1999
+\end{itemize}
+\coursebreak
+\subsection{Statistical Methods}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Random Sample, Sample distributions and CLT, Point estimation, Unbiasedness, MSE, Interval estimation, Pivotal quantity, Large sample interval estimation, Hypothesis test, Simple hypothesis tests, Test statistics, Decision rule, First and second kind of errors, One/Two-sided hypothesis tests, P-value, Large sample hypothesis tests, Hypothesis tests for comparing means and variances of two independent populations, Statistical inference about the difference of means of pairwise observations, Goodness-of-fit test, Contingency tables, Concept of linear dependence and Simple linear regression.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Statistical concepts and methods Gouri K. Bhattacharyya, Richard A. Johnson, John wiley and Sons, 1977 - Translated to Farsi, 1st and 2nd vol.
+\end{itemize}
+\coursebreak
+\subsection{Mathematical Statistics 1}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Review of distribution theory, Exponential family of distributions, Location family, Scale and location-scale family, Estimation methods, Concept of estimate and estimator, Moments method, Maximum likelihood method, Properties of ML estimators, Consistency, Minimum variance unbiased estimators, Unbiased estimators, Cramer-Rao inequality and Fisher information, Bayes' Statistic, Lost function, Risk function, Prior and posterior distribution, Conjugate prior, Bayesian estimation.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Mood A.M., Graybill F.A. and Boes D.C. (1973), Introduction to the theory of Statistics,McGraw Hill, 3rd Ed.
+\item Parsian A. (2019), Basic concepts of mathematical statistics, Isfahan University of Technology, 4th Ed.
+\end{itemize}
+\coursebreak
+\subsection{Mathematical Statistics 2}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Methods of finding interval estimators, Pivotal quantity, General method, Distribution function method, Equal-Tailed and Shortest-length confidence intervals, Unbiased confidence intervals, Large sample confidence intervals, Confidence intervals for the difference of means and proportion of variances of two dependent-independent populations, quantiles, Simple hypothesis tests, Test statistic, Test errors, Power function, P-value, Powerful test, Randomized hypothesis test, Likelihood ratio test, Comparing two tests, UMPT, Compound hypotheses, MLR property, UMP in one-sided tests, Generalized likelihood ratio test, Asymptotic distribution of LRT, Relation between hypothesis tests and confidence intervals, Goodness-of-fit test, Chi-Squared test, Bayes' Statistic, Lost/Risk function, Prior and posterior distribution, Conjugate prior, Bayesian estimation.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Mood A.M., Graybill F.A. and Boes D.C. (1973), Introduction to the theory of Statistics,McGraw Hill, 3rd Ed.
+\item Parsian A. (2019), Basic concepts of mathematical statistics, Isfahan University of Technology, 4th Ed.
+\end{itemize}
+\coursebreak
+\subsection{Regression 1}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Simple linear regression, Estimating the least squares of parameters, Interpretation of Regression coefficients, Dividing the population into subpopulations, Regression coefficients' hypothesis test, Regression coefficients confidence intervals, Predicting the response for new observations, Prediction interval for new observations, Coefficient of determination, Regression through the centre, MLE, Correlation coefficient and its test, Regression model with stochastic regressor variables, Multiple linear regression, Estimating the model parameters, Interval estimation for regression coefficients and mean of response, Regression models with orthogonal model matrix, Point and interval Prediction for the new observations, Normalized regression coefficients, Multiple coefficient of determination, Multinomial regression models, Test for significance of regression, Partial regression coefficient, Generalization of linear hypothesis test, Interpretation of regression coefficients.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Montgomery, Douglas C., Elizabeth A. Peck, G. Geoffrey Vining (2012), Introduction to linear regression analysis, Wiley; 5th Ed.
+\item Alvin C. Rencher, G. Bruce Schaalje (2008), Linear models in statistics, Wiley-Interscience; 2nd Ed.
+\end{itemize}
+\coursebreak
+\subsection{Sampling Methods 1}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Deterministic sampling, Probability sampling, Sampling frame, Sampled population, Total error of census, Sampling and non-sampling errors, Simple random sampling, Sample selection (With or without replacement), Estimators of population, Confidence intervals, Determining the sample size, Stratification sampling, Total sum, mean and proportion estimators, Selecting the strata, Stratification sampling vs simple random sampling, Posterior stratification, Sampling with varying probabilities, Stratification with probability proportional to size, Methods of selecting the sample with varying probabilities, Lahiri's method and cumulative method, Sampling with varying probability without replacement and the parameters' estimators
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Amidi A. (2005), Sampling theory and its applications, 3rd Ed., IUP, Tehran
+\item C.E. Sarndal, B.Swensson, J. Wretman, Model assisted survey sampling
+\end{itemize}
+\coursebreak
+\newpage
+\section{Probability \& Stochastic Processes}
+
+\subsection{Advanced Probability I (MATH 521 / STAT 521)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Measure-theoretic foundations of probability; probability spaces and integration; independence; modes of convergence and laws of large numbers; characteristic functions and Fourier methods for distributions. The 521--523 sequence develops the measure-theoretic and asymptotic foundations used in modern probability and statistics.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Rick Durrett, \emph{Probability: Theory and Examples} (aligned sequence reference).
+\item Olav Kallenberg, \emph{Foundations of Modern Probability} (aligned sequence reference).
+\item Patrick Billingsley, \emph{Probability and Measure} (aligned foundational reference).
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-521}
+\coursenote{The topic description follows the joint MATH/STAT Advanced Probability sequence; exact emphasis varies by instructor.}
+\coursebreak
+
+\subsection{Advanced Probability II (MATH 522 / STAT 522)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Continuation of measure-theoretic probability with Fourier analysis of probability laws, central-limit problems, infinitely divisible distributions, conditional expectation, martingales, and further convergence tools. The course develops techniques used in advanced stochastic analysis and asymptotic probability.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Rick Durrett, \emph{Probability: Theory and Examples} (aligned sequence reference).
+\item Olav Kallenberg, \emph{Foundations of Modern Probability} (aligned sequence reference).
+\item Patrick Billingsley, \emph{Convergence of Probability Measures} (aligned reference for weak-convergence material).
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-522}
+\coursenote{The official catalog describes MATH/STAT 521--523 as a joint Advanced Probability sequence; exact quarterly topic allocation may vary.}
+\coursebreak
+
+\subsection{Advanced Probability III (MATH 523 / STAT 523)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Advanced probability and stochastic analysis, with emphasis that may include martingales, stochastic integration, quadratic variation, Itô's formula, Girsanov and martingale-representation theorems, Lévy and Gaussian processes, stochastic differential equations, connections with partial differential equations, and filtering.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Richard F. Bass, \emph{Stochastic Processes}.
+\item Olav Kallenberg, \emph{Foundations of Modern Probability} (aligned reference).
+\item Rick Durrett, \emph{Probability: Theory and Examples} (aligned reference).
+\end{itemize}
+\sourceurl{https://math.washington.edu/courses/2024/spring/math/523/a}
+\coursenote{A recent UW MATH 523 offering was explicitly devoted to stochastic analysis and used Bass as the textbook; the precise emphasis can vary across offerings.}
+\coursebreak
+\subsection{Theory of Probability 1 (STAT 701)}
+\coursemeta{University of Calgary · graduate coursework}
+{\bfseries Topics.} Probability spaces, integration, expected value, laws of large numbers, weak convergence, characteristic functions, central limit theorems, limit theorems in Rd, conditional expectation, introduction to martingales.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Rick Durrett, Probability: Theory and Examples: Cambridge University Press, 2019.
+\end{itemize}
+\coursebreak
+\subsection{Probability 1}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Probability, Random experiment (Compound and Sample), Different concepts of probability, Probability function, Uniform probability space (Classic probability model), Computing methods of probability in finite cases, Basic counting methods, Rules of counting, Ordered samples and permutations, Unordered samples and combinations, Ordered partitions and distinct permutations, Conditional probability, Compound experiments, Conditional probability application and Bayes' rule, Stochastic independence, Random variables, Cumulative distribution function, Discrete random variables, Continuous random variables, The distribution of a function of a random variable, Binomial distribution, Geometric distribution, Hyper-Geometric distribution, Negative-Binomial distribution, Poisson distribution, Discrete uniform distribution, Uniform distribution, Exponential distribution, Gamma distribution, Chi-Squared distribution, Normal distribution, Beta distribution, Cauchy distribution, Concentration and dispersion, Expectation, Expectation of a function of a random variable, Properties and applications of expectation, Moment generating functions, Variance, Multivariate distributions, Discrete and continuous Multivariate random variables, Multinomial distribution, Bivariate normal distribution, Independent random variables, Covariance, Correlation coefficient, Distribution of a function of a multivariate random variable, Distribution function method, Change of variables method, T-Distribution, F-Distribution, Chi-Squared Distribution, Discrete and continuous conditional distribution of multivariate random variables
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Ross S.M. (2014), A first course in probability, 9th Ed., Pearson Education Limited
+\item Ghahramani S. (1996), Fundamentals of Probability; with stochastic processes,Prentice Hall
+\item G.R. Grimmett and D. Stirzaker (2000), Probability and Random Processes, 3rd Ed., Oxford.
+\end{itemize}
+\coursebreak
+\subsection{Probability 2}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Moment generating function, Probability generating function and its relation with the moments, Distribution of transformation of joint random variables (Moment generating method and change of variables method), Order statistics, Distribution function of an order statistic, Joint distribution of two or more order statistics, Sample range and Sample median distribution, Conditional distribution applications, Expectation of conditional distributions and their applications (Including total expectation and forecasting), Conditional variance and studying them for bivariate normal distribution, Limit theorems, Convergence in distribution, Second order convergence, Convergence in probability, Weak law of large numbers, Central limit theorem, Important inequalities in probability (Jensen's inequality, Markov's inequality, Chebyshev's inequality).
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Ross S.M. (2014), A first course in probability, 9th Ed., Pearson Education Limited
+\item Ghahramani S. (1996), Fundamentals of Probability; with stochastic processes,Prentice Hall
+\item G.R. Grimmett and D. Stirzaker (2000), Probability and Random Processes, 3rd Ed., Oxford.
+\end{itemize}
+\coursebreak
+\subsection{Stochastic Processes}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Bernoulli processes, Number/times of success, Sums of random variables process, Poisson processes, Arrival times, Compound poisson process, Markov chains, Zero-state distribution, Hitting times, Transition matrix, Recurrent and transient states, Absorption probabilities, Branching processes and queueing, Decomposition of location space, Stationary distributions, Birth and death chains, Irreducible chains, Null and non-null recurrent states, Mean number of visits to a fixed recurrent state, Monte Carlo method, Continuous-time markov processes, Jump processes, Jump process applications in birth and death processes and queueing.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Karlin, S. Taylor, H. M. (1975), A First Course in Stochastic Processes, 2nd Ed.
+\item Cinlar, E. (1975), Introduction to Stochastic Processes
+\item Karlin, S. Taylor, (2011), An Introduction to Stochastic Modeling, Academic Press, 4th Ed.
+\end{itemize}
+\coursebreak
+\subsection{Optimal Transport + Stochastic Analysis (MATH 581C)}
+\coursemeta{University of Washington · graduate special topics}
+{\bfseries Topics.} Monge--Kantorovich optimal transport; analytic descriptions of optimal maps; Kantorovich duality and Brenier's theorem; displacement convexity; Wasserstein geometry and Otto calculus; stochastic and probabilistic viewpoints on transport; entropy-regularized optimal transport, Schrödinger bridges, and statistical optimal transport.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Cédric Villani, \emph{Optimal Transport: Old and New}.
+\item Filippo Santambrogio, \emph{Optimal Transport for Applied Mathematicians}.
+\item Luigi Ambrosio, Nicola Gigli, and Giuseppe Savaré, \emph{Gradient Flows in Metric Spaces and in the Space of Probability Measures} (aligned reference).
+\item Instructor notes and papers from the UW/PIMS course taught by Soumik Pal and Young-Heon Kim.
+\end{itemize}
+\sourceurl{https://courses.pims.math.ca/courses/2025-2026/optimal-transport-theory-applications/}
+\coursenote{The UW 2025--26 special-topics schedule identifies the Autumn course as MATH 581C, ``Optimal Transport + Stochastic Analysis.''}
+\coursebreak
+\newpage
+\section{Machine Learning, Data Science \& AI}
+\subsection{Statistical Learning: Modeling, Prediction, and Computing (STAT 535)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Statistical learning over discrete multivariate domains, exemplified by graphical probability models. Emphasizes the algorithmic and computational aspects of these models. Includes additional topics in probability and statistics of discrete structures, general purpose discrete optimization algorithms like dynamic programming and minimum spanning tree, and applications to data analysis.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Kevin P. Murphy, \emph{Machine Learning: A Probabilistic Perspective}.
+\item Trevor Hastie, Robert Tibshirani, and Jerome Friedman, \emph{The Elements of Statistical Learning}, 2nd ed.
+\item Ian Goodfellow, Yoshua Bengio, and Aaron Courville, \emph{Deep Learning} (for neural-network material).
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-535}
+\coursenote{UW course pages list these as optional or aligned references in recent offerings.}
+\coursebreak
+\subsection{Machine Learning for Big Data (STAT 548 / CSE 547)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Machine learning and statistical techniques for analyzing datasets of massive size and dimensionality. Representations include regularized linear models, graphical models, matrix factorization, sparsity, clustering, and latent factor models. Algorithms include sketching, random projections, hashing, fast nearest-neighbors, large-scale online learning, and parallel learning (Map-Reduce, GraphLab).
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Jure Leskovec, Anand Rajaraman, and Jeffrey D. Ullman, \emph{Mining of Massive Datasets} (optional course text).
+\item Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein, \emph{Introduction to Algorithms} (related algorithms reference).
+\item Stephen Boyd and Lieven Vandenberghe, \emph{Convex Optimization} (related optimization reference).
+\end{itemize}
+\sourceurl{https://sites.stat.washington.edu/mmp/courses/548/sp25/handouts/h0-about.html}
+\coursenote{The Spring 2025 course page identifies \emph{Mining of Massive Datasets} as an optional textbook.}
+\coursebreak
+\subsection{Mathematics and AI (MATH 581E)}
+\coursemeta{University of Washington · graduate special topics}
+{\bfseries Topics.} Mathematical foundations and limitations of neural networks and transformers; universal approximation; implementation of neural networks in Python and PyTorch; large language and reasoning models; interactive theorem proving in Lean; dependent type theory and mathematical formalization; tactics and automated theorem proving; reinforcement learning and AlphaZero-style search; autoformalization and AI-assisted mathematical discovery; implications of AI for mathematical research and education.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Ian Goodfellow, Yoshua Bengio, and Aaron Courville, \emph{Deep Learning} (aligned background reference).
+\item Jeremy Avigad, Leonardo de Moura, and Soonho Kong, \emph{Theorem Proving in Lean} / current Lean documentation.
+\item \emph{Mathematics in Lean} (Lean community online text).
+\item Selected papers on transformers, reasoning models, reinforcement learning, and automated theorem proving from the public course syllabus.
+\end{itemize}
+\sourceurl{https://sites.math.washington.edu/~jarod/math583E-fall25.html}
+\coursenote{Course code follows the UW 2025--26 annual special-topics schedule (MATH 581E); content and readings follow the instructor's public Fall 2025 course page.}
+\coursebreak
+\newpage
+\section{Optimization}
+
+\subsection{Networks and Combinatorial Optimization (MATH 514 / AMATH 514)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Mathematical foundations of combinatorial and network optimization with emphasis on structure, algorithms, and proofs: graphs and minimum spanning trees; convexity, polyhedra, and linear programming; duality; matching; network flows and max-flow/min-cut; integer programming and total unimodularity; cuts and stable sets; semidefinite relaxations; matroids and matroid intersection.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Alexander Schrijver, course notes / selections on combinatorial optimization.
+\item Alexander Schrijver, \emph{Combinatorial Optimization: Polyhedra and Efficiency} (aligned comprehensive reference).
+\end{itemize}
+\sourceurl{https://sites.math.washington.edu/~vinzant/teaching/514/}
+\coursenote{The Autumn 2025 UW syllabus states that there is no official textbook and that lectures follow notes by Alexander Schrijver.}
+\coursebreak
+\subsection{Optimization: Fundamentals and Applications (MATH 515)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Maximization and minimization of functions of finitely many variables subject to constraints. Basic problem types and examples of applications; linear, convex, smooth, and nonsmooth programming. Optimality conditions. Saddlepoints and dual problems. Penalties, decomposition. Overview of computational approaches.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item R. Tyrrell Rockafellar, \emph{Fundamentals of Optimization} (UW course lecture notes).
+\item Stephen Boyd and Lieven Vandenberghe, \emph{Convex Optimization} (aligned background reference).
+\end{itemize}
+\sourceurl{https://sites.math.washington.edu/~burke/crs/515/}
+\coursenote{UW hosts Rockafellar's course notes for this sequence.}
+\coursebreak
+\subsection{Numerical Optimization (MATH 516)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Methods of solving optimization problems in finitely many variables, with or without constraints. Steepest descent, quasi-Newton methods. Quadratic programming and complementarity. Exact penalty methods, multiplier methods. Sequential quadratic programming. Cutting planes and nonsmooth optimization.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Jorge Nocedal and Stephen J. Wright, \emph{Numerical Optimization}, 2nd ed.
+\end{itemize}
+\sourceurl{https://sites.math.washington.edu/~burke/crs/516/}
+\coursenote{The UW course page lists Nocedal--Wright as a supplementary text.}
+\coursebreak
+\subsection{Statistical Learning: Modeling, Prediction, and Computing (STAT 538)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Reviews optimization and convex optimization in its relation to statistics. Covers the basics of unconstrained and constrained convex optimization, basics of clustering and classification, entropy, KL divergence and exponential family models, duality, modern learning algorithms like boosting, support vector machines, and variational approximations in inference.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Stephen Boyd and Lieven Vandenberghe, \emph{Convex Optimization}.
+\item Trevor Hastie, Robert Tibshirani, and Jerome Friedman, \emph{The Elements of Statistical Learning}, 2nd ed.
+\item Dimitri P. Bertsekas, \emph{Nonlinear Programming} (supplementary background).
+\end{itemize}
+\sourceurl{https://stat.uw.edu/academics/course-catalog/stat-538}
+\coursenote{Representative references aligned with the optimization and statistical-learning syllabus.}
+\coursebreak
+\newpage
+\section{Analysis \& High-Dimensional Geometry}
+\subsection{Real Analysis 1}
+\coursemeta{Isfahan University of Technology · graduate-level course completed during B.Sc.}
+{\bfseries Topics.} Measure Theory: Sigma-Algebra and their generators, Dynkin system, Contents, Premeasure, Measure, Lebesgue Premeasure, Extending a Premeasure to a measure, Lebesgue measure and measures on real numbers, Measurable operators, Operatory properties of Lebesgue measure. Integration Theory: Measurable functions, Simple functions, Nonnegative measurable functions integration, Integrability, Almost everywhere properties, Lp Spaces, Convergence theorems and their applications, Radon Nikodym Theorem, Signed measures, Integration with respect to an operatory measure, Convergence in measure, Equi-Integrable.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Measure and Integration Theory, Heinz Bauer, Translation to Persian by Dr. Rasoul Nasr Isfahani
+\item Gerald B. Folland, Real Analysis: Modern Techniques and Their Applications, 2nd Edition, Wiley, 2007.
+\end{itemize}
+\coursebreak
+\subsection{Mathematical Analysis 1}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Field of real numbers, Least/greatest upper bouns , Archimedean property, Density of rational/ irrational numbers, Real Sequences, Convergence and divergence, Upper/ lower limit of a bounded sequence, Cauchy sequence, Convergence and divergence of a series, Cauchy's criterion for convergence, Convergence tests, Rearrangement of a series, Metric space, Open and closed sets, Compact sets, Connected sets, Sequences in a metric space, Cauchy sequences and complete metric spaces, Continuity, Topological properties of continuous functions, Continuity and Compactness/connectedness, Uniform continuity, Derivative of functions, Intermediate value theorem for derivative, Riemann integrable functions, Lebesgue criterion for Riemann integrability, Riemann--Stieltjes integral
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item S.K. Berberian (1994), A first course in real analysis, Springer-verlage New York
+\item Self-Reading: Real Analysis: a first course, by Gordon, Russel A. Seasons 1,2,3, 6, and 8.
+\end{itemize}
+\coursebreak
+\subsection{Mathematical Analysis 2}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Metric spaces: Normed linear spaces, Open and closed sets, Interior and closure of a set, Compact sets, Connected sets, Sequences and convergence, Completeness, Continuity, Continuity and compact/connected sets, Uniform convergence. Sequence of functions, Relation between uniform convergence and continuity/differentiability/integrability, Weierstrass approximation theorem, Stone-Weierstrass theorem, Compact subsets of C(X), Arzela-Ascoli lemma, Series of functions, Weierstrass M test, Abel's test for uniform convergence. Power series, Fourier series.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Rudin W. (1976), Principles of Mathematical Analysis, McGraw-Hill Publishing Company; 3rd Ed.
+\item Ulger A. (2006), Real Analysis
+\end{itemize}
+\coursebreak
+\subsection{Complex Analysis}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Complex Numbers: Algebraic operations, Absolute value, Conjugate, Polar s, Roots, Topological concepts (Metrics and Connectedness), Elementary functions, Analytic functions and Cauchy-Riemann equations, Harmonic functions, Contour integrals, Cauchy-Goursat theorem, Cauchy integral formula and its applications, Liouville's theorem, The Fundamental Theorem of Algebra, Power/Taylor/ Laurent series, Maximum modulus principle, Zeros and singular points, Isolated Singular points, Rouche's theorem, Hurwitz's theorem, Cauchy's residue theorem and its application in evaluation of improper integrals, Linear fractional transformations, Conformal mapping.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Berenstein, A.C. and Gay, R. (1991), Complex Variables, An Introduction, Springer-Verlag, New York
+\item Krantz, S.G. (2008), A Guide to Complex Variables, The Mathematical Association of America
+\end{itemize}
+\coursebreak
+\subsection{Point-set Topology}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Topological spaces, Open and closed sets, Neighborhood of a point, Interior point and limit point, Closure of a set, Base and sub-base of a topology, Separable space, Countable spaces of first and second types, Hausdorff space, Continuous functions, Open mapping, Product space, Tychonoff's theorem , and some of its application such as Stone-Cech compactification, Imbedding and homeomorphism, Qoutient space and quotient mapping, Compactness and connectedness, Axioms of separability, Regular space, Normal space, Urison's lemma, Metric spaces, Metrizability theorems and paracompactness, Complete metric spaces, Function spaces, Ascoli's theorem.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Munkres, J.R. (2000) Topology, A first course, Second edition, Prentice Hall, Incorporated. 2)
+\item Engelking, R. (1989) General topology, Second edition, Sigma series in pure mathematics, Verlag, Berlin. 3)
+\item Willard, S. (2012) General topology, Dover publications Inc. Mineola, New York. 4)
+\item Simmons, G.F. (1983) Introduction to topology and modern analysis, Krieger publishing Co., Melbourne %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{itemize}
+\coursebreak
+\subsection{Topology and Geometry of Manifolds (MATH 544)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} General topology, the fundamental group, covering spaces, topological and differentiable manifolds, vector fields, flows, the Frobenius theorem, Lie groups, homogeneous spaces, tensor fields, differential forms, Stokes's theorem, deRham cohomology.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item John M. Lee, \emph{Introduction to Topological Manifolds}, 2nd ed.
+\end{itemize}
+\sourceurl{https://sites.math.washington.edu/~palmieri/Courses/2024/Math544/Info.php}
+\coursenote{The available UW syllabus lists Lee as the main textbook.}
+\coursebreak
+\subsection{Localization Techniques in High-Dimensional Geometry (MATH 582A)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Concentration of measure in different settings (Euclidean, Riemannian and discrete) and the main open problems surrounding it, proof techniques involving different types of localization, applications of localization techniques in geometry, probability statistics, and theoretical computer science. After taking the course, students will have the necessary background in order to both conduct research around open problems in concentration of measure, find new applications to existing localization techniques and perhaps also develop new localization techniques.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Roman Vershynin, \emph{High-Dimensional Probability}.
+\item Michel Ledoux, \emph{The Concentration of Measure Phenomenon}.
+\item Shiri Artstein-Avidan, Apostolos Giannopoulos, and Vitali D. Milman, \emph{Asymptotic Geometric Analysis, Part I}.
+\end{itemize}
+\sourceurl{https://math.washington.edu/25-26-annual-course-overview-archive}
+\coursenote{The UW 2025--26 schedule lists this as MATH 582A, ``Localization techniques in High-dimensional geometry. The course was taught by Dan Mikulincer; the books are representative aligned references.}
+\coursebreak
+\subsection{Microlocal Analysis and Semiclassical Analysis (MATH 583C)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Microlocal analysis comprises techniques developed from the 1950s on-ward based on the Fourier transform related to the study of variable coefficients, linear and non- linear partial differential equations. This includes distributions, pseudodifferential operators, wave front sets, Fourier integral operators, and paradifferential operators. It has applications in many fields including inverse problems, general relativity, quantum mechanics, quantum field theory, spectral theory etc. Semiclassical analysis is a branch of mathematical physics and analysis that studies the behavior of quantum systems in the limit where Planck's constant goes to zero. It serves as a bridge between classical mechanics and quantum mechanics, offering approximations of quantum phenomena using classical concepts. We will give applications of Microlocal Analysis and Semiclassical Analysis to Inverse Problems.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Peter Hintz ''An introduction to Microlocal Analysis, Springer Verlag, GTM 304.
+\end{itemize}
+\sourceurl{https://math.washington.edu/annual-course-overview-past}
+\coursenote{Original-project course title and text retained.}
+\coursebreak
+\subsection{Mathematics of Medical Imaging (MATH 583E)}
+\coursemeta{University of Washington · graduate coursework}
+{\bfseries Topics.} Mathematics underlying computed tomography (CT), positron emission tomography (PET), single-photon emission computed tomography (SPECT), and ultrasound; Radon transforms and their inversion; integral geometry and microlocal-analytic ideas arising in inverse problems for imaging.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Charles L. Epstein, \emph{Introduction to the Mathematics of Medical Imaging}.
+\item Stanley R. Deans, \emph{The Radon Transform and Some of Its Applications}.
+\item Frank Natterer, \emph{The Mathematics of Computerized Tomography}.
+\item Sigurdur Helgason, \emph{The Radon Transform}.
+\item Plamen Stefanov and Gunther Uhlmann, course material on microlocal analysis and integral geometry.
+\end{itemize}
+\sourceurl{https://math.washington.edu/annual-course-overview-past}
+\coursenote{Course code/title and references normalized to the UW Spring 2025 special-topics listing.}
+\coursebreak
+\newpage
+\section{Linear Algebra}
+\subsection{Linear Algebra 1}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Matrices, System of linear equations, Elementary row operations, Row reduced echelon matrices, Rank, Calculating the inverse of a matrix, Determinant, Vector spaces, Important examples of vector spaces, Subspace, Linea Independence and dependence, Basis and dimension, Sum of subspaces, Inner product spaces, Gram-Schmidt theorem, Orthogonal decomposition, Linear transformations, Change of basis matrix, Rank and nullity of a linear transformation, Eigenvalues and eigenvectors, Characteristic polynomial, Minimal polynomial, Primary or spectral decomposition theorem, Cayley Hamilton theorem, Triangular forms, Jordan forms.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Meyer C. D. (2000), Matrix analysis and applied linear algebra, SIAM
+\item Strang, G. (2016), Introduction to linear algebra, 5th Ed., Thomson Learning Inc.
+\end{itemize}
+\coursebreak
+\subsection{Linear Algebra 2}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Inner product spaces, Direct sums of subspaces, LU Decomposition, Triangular forms, Jordan forms, Rational and Classic forms, Orthogonal direct sums, Quadratic forms, Bilinear forms, Hermitian matrices, Normal matrices, Positive definite matrices and their properties.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item T. S. Blyth and E.F. Robertson (2002), Further Linear Algebra, Springer undergraduate mathematics series
+\end{itemize}
+\coursebreak
+\newpage
+\section{Mathematical Foundations \& Discrete Mathematics}
+\subsection{Introduction to Mathematics}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} An introduction to propositional logic and the logic of predicates, First order logic, Axiomatic set theory and its justification by alluding to some mathematical paradoxes such as Russel's paradox, The Boolean algebra of sets, Indexed family of sets, Union and intersection of a family, Cartesian product of two sets, Relation, equivalence relations and their link to partitions of sets, The set of equivalence classes, Combination of two relations, Function, restriction and extension of functions, One-to-one and onto function, Left inverse and right inverse functions, Inverse function, Equipotence, finite and infinite sets, Countable and uncountable sets, Countability of rationals and uncountability of real numbers, Cardinal numbers, Ordering on cardinal numbers, Schröder--Bernstein theorem, Main operations on cardinal numbers such as addition and multiplication
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Ian Stewart, David Tall, The Foundations of Mathematics, Oxford University Press, 2007
+\item Herbert Kenneth Kunen, The Foundations of Mathematics, College Publications, 2009
+\item Shwu-Yeng T. Lin, You-Feng Lin, Set theory with applications, Book Publishers, 1985
+\end{itemize}
+\coursebreak
+\subsection{Introduction to Combinatorics}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Basic principles of counting, The pigeonhole principle, Permutations and combinations, Binomial coefficients, Inclusion and exclusion, Recursive relations, Ordinary and exponential generating functions, Zero and One matrices, Graph Theory, Degree, Degree sequence, Cycles, Paths, Complete graphs, Trees, Bipartite graphs, Eulerian and Hamiltonian graphs, Directed graphs and tournaments, Perfect and maximal matchings, Coloring, Planar graphs, Latin squares, Distinct representation systems (SDR), Philip Hall's theorem.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Anderson, I. (1989), A first course in combinatorial mathematics, Second Edition, Oxford Applied Mathematics and Computing Science Series
+\item Brualdi, R. (2012), Introductory Combinatorics, 5th Ed., Pearson Education International
+\end{itemize}
+\coursebreak
+\subsection{Graph Theory}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Graphic sequence, Interval graphs, Edge graphs, Graph modeling, Paths and distance, Connectivity, Subgraphs, Graph isomorphism, Matrix representation of a graph, Counting the number of trees, Spanning trees, BFS, DFS, MST, Directed graphs, Tournaments, Eulerian/Hamiltonian graphs, Vertex-Edge connectivity, Cut edges and bonds, Cut vertices, Cayley's formula, Block decomposition, k-connected graphs, Menger's theorem, Planar graphs, Euler's formula, Minors, Subdivisions and Kuratowski's theorem, Duality, Independent sets, Touran's theorem,Ramsey's theorem, Edge colorings, Chromatic number, Greedy algorithms, Brooks' theorem, Hajo's conjecture, Critical graphs, Four color theorem, Matchings, Matchings and coverings in bipartite graphs, Perfect matchings, Hall's marriage theorem, Konig's theorem, Matchings in general, Edge colorings, Factorisation, Vizing's theorem.theorem.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Bondy J.A., Murty S.R. (1976), Graph theory with applications, The Macmillan press Ltd
+\end{itemize}
+\coursebreak
+\newpage
+\section{Calculus \& Geometry}
+\subsection{Calculus 1}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Sequence of Real numbers, Convergence of a sequence, Monotone convergence theorem, The squeeze theorem, Numerical Series, Convergence and divergence of numerical series, Convergence tests of series with nonnegative terms, Arbitrary terms series, Cauchy product of two series, Power series, Radius of Convergence of a power series, Definition of the Exponential function in terms of series and its properties, Continuity and limiting behavior of the Exponential function, Hyperbolic functions, Logarithm function and its properties, Other Exponential and Logarithmic functions, Reviewing the concept of derivative of a function, Derivative of Transcendental functions, Principal theorems of differentiation, Derivative of a composite function, Rolle's theorem, Mean value theorem, Cauchy mean value theorem, Finite Taylor expansion, L'Hopital's rule, Differentiation's application in limiting behavior of a function, Primitive function (Indefinite Integrals), Integration methods, Change of variables , Integration by parts, Trigonometric change of variables, Partial fraction decomposition, Particular change of variables, Riemann integral, Integrability of continuous and continuous by parts functions, Properties of definite integrals, Integral mean value theorem, The fundamental theorem of calculus, Improper integrals, Derivative and integral of Power series, Taylor expansion, The field of imaginary numbers, The complex plane, Complex numbers in polar form,Solving equations with algebraic methods.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Aghasi M., Mashkouri M., Bahrami F., Taherian Gh., Calculus of one variable real functions, Department of Mathematical Sciences, Isfahan University of Technology
+\item Naderi, A., Zohouri Zangeneh H. (2004), Single Variable Calculus, IUT Publishing Co., Isfahan, Iran
+\end{itemize}
+\coursebreak
+\subsection{Calculus 2}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Multivariate functions, The level set of a function, Cylindrical surfaces, Surfaces of revolution, Quadratic surfaces, Limits and continuity of multivariate functions, Limits via paths, Implicit derivatives, Differentiability, Chain rule, Directional derivatives, Parametric curves and the tangent vector to a curve, Tangent plane of a surface and its normal line, Relative, absolute and local extrema of multivariate functions, Double integrals, Computing double integral on regions of the plane, Change of variables in double integrals, Change of variables in polar coordinate, Triple integrals, Computing triple integrals on regions of the space, Change of variables in triple integrals, Triple Integration with Cylindrical and Spherical Coordinates, Line integral with respect to the arc length, Line integral with respect to the position vector, Green's theorem ( In plane), Integration over surfaces, Gauss's theorem (Divergence), Stokes' theorem.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Richard A. Silverman, Modern Calculus and Analytic Geometry, Dover Publications; Illustrated edition (June 20, 2012) - Seasons 11 to 15
+\item Calculus II problem set (Download from Mathematics Department Website)
+\end{itemize}
+\coursebreak
+\subsection{Introduction to Geometry}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Euclidean Geometry, The Axiomatic method, Undefined terms, Euclid's first four postulates, The parallel postulate, Incidence geometry, Models, Isomorphism of models, Hilbert's axioms, Axioms of Betweenness, Axioms of congruence, Axioms of Continuity, Hilbert's Euclidean axiom of parallelism, Neutral geometry, Alternate interior angle theorem, Exterior angle theorem, Measure of angles and segments, Saccheri-Legendre theorem, History of parallel postulate, Angle sum of a triangle, Hyperbolic geometry, Similar triangles, Parallels which admit a common perpendicular, Limiting parallel rays
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Marvin J. Greenberg (2008), Euclidean and non-euclidean geometries: development and history-W.H freeman, 4th Ed.
+\end{itemize}
+\coursebreak
+\newpage
+\section{Numerical \& Computational Methods}
+\subsection{Numerical Analysis}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Sources of error, Computer representation of numbers and its properties, Propagation of error in function evaluation, Well-posed problem and stability, Approximating functions by Taylor expansion and its error estimation, Existence and uniqueness of nonlinear equations, Bisection method, False position method, Fixed point iteration method, Newton-Raphson method, Secant method, Error estimation and stopping criteria, Order of convergence and multiple roots, Horner algorithm and Newton method for finding the roots of polynomials, Interpolation problem, Lagrange interpolation method, Newton divided differences method, Forward and backward methods for equidistant points, Runge counter-example, Interpolation based on roots of Chebyshev polynomials, Discrete and continuous least squares for polynomials curve fitting, Trapezoidal, Simpson, Mid-point rules, Degree of precision of a quadrature rule, Newton-Cotes integration formulas, Gaussian quadrature, Richardson extrapolation and Romberg integration, Numerical differentiation and study of their order of convergence and degree of precision by Taylor expansion and interpolation, Instability in numerical differentiation
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Burden R.L., Faires J.D. (2015), Numerical Analysis, Cengage Learning, 10th Ed.
+\item Quarteroni A., Saleri F., Gervasio, P. (2014), Scientific Computing with MATLAB and Octave, Springer-Verlag Berlin, 4th Ed.
+\end{itemize}
+\coursebreak
+\subsection{Programming with Maple}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} Propositional logic, A logical or topological proof of compactness theorem, First-order logic, First-order structures and homomorphisms, Truth and deduction, Various deduction systems (Hilbert system and sequent calculus), Interpolation theorem, Gödel's soundness and completeness theorem, Introductory model theory including compactness, Löwenheim-Skolem theorems, Quantifier elimination, Non-standard analysis, Mathematical implications of compactness theorem, Computability and recursiveness, Church-Turing Thesis, Gödel's incompleteness theorem, Introductory complexity theory and p-vs-np problem.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Enderton, H, Enderton, H.B. (2001), a mathematical introduction to logic, 2nd Ed., Elsevier
+\item Mendelson, E. (2009), Introduction to Mathematical Logic, 5th Ed., CRC Press.
+\end{itemize}
+\coursebreak
+\subsection{Introduction to Computer Programming}
+\coursemeta{Isfahan University of Technology · undergraduate coursework}
+{\bfseries Topics.} An Introduction to the course, Hardware at a glance, Solving problems using computers (Flowchart and pseudo-codes), Introduction to C, Decision control structures (conditions and loops), Compilation and execution, Bitwise operators, Integer and float conversions, Associativity of operators, Decisions using switch, The goto keyword, Functions and Pointers (call by value and call by reference), Passing values between functions, Function declarations and prototypes, Data types, Arrays, Strings, Structures.
+
+{\bfseries Texts / references.}
+\begin{itemize}
+\item Yashavant P. Kanetkar (2004), Let Us C: Authentic guide to C programming language, 5th Ed.
+\end{itemize}
+\coursebreak
+
+\vfill
+\begin{center}
+{\small\color{Muted}Prepared as a topical record of completed coursework for \href{https://armanjg.github.io/}{armanjg.github.io}.}
+\end{center}
+\end{document}
