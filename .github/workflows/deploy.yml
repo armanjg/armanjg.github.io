@@ -29,11 +29,19 @@ jobs:
           working_directory: source/teaching-dossier
           texlive_version: 2026
 
+      - name: Compile selected coursework
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          working_directory: source/selected-coursework
+          texlive_version: 2026
+
       - name: Stage website
         run: |
           rm -rf _site
           cp -R site _site
           cp source/teaching-dossier/main.pdf _site/assets/documents/teaching/teaching-dossier.pdf
+          cp source/selected-coursework/main.pdf _site/assets/documents/research/coursework.pdf
           touch _site/.nojekyll
 
       - name: Configure GitHub Pages
